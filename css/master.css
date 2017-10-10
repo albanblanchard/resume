@@ -1,5 +1,6 @@
-/*ma feuille de style*/
-html, body {margin: 0; padding: 0; height: 100%; width:100%;
+/*css resume*/
+html, body {
+  margin: 0; padding: 0; height: 100%; width:100%;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -7,7 +8,7 @@ header, footer {
   padding: 2%;
   width: 96%;
   min-height: 20%;
-  background-color: #000;
+  background-color: #221e1b;
   color: #fff;
   display: flex;
   flex-wrap: wrap;
@@ -18,8 +19,8 @@ header, footer {
 /*entête*/
 #logo {
 flex: 1;
-background-color: pink;
-margin: 0;
+/*background-color: pink;*/
+margin: 1em 0;
 display: flex;
 flex-wrap: wrap;
 justify-content: flex-start;
@@ -42,7 +43,7 @@ margin:2%;
 }
 
 
-nav { background-color: blue; align-self: flex-end;}
+nav { align-self: flex-end;}
 
 a:link, a:visited {
   padding: .3em;
@@ -69,7 +70,8 @@ nav li {
 }
 
 /*contenu - sections*/
-#content { background-color: yellow;
+#content {
+  /*background-color: yellow;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,20 +79,75 @@ nav li {
   /*min-height: 54%;*/
   /*margin 5% 20%;*/
 }
-section{ background-color: white;
+
+section{
+  /*background-color: white;*/
   padding: 5%; margin-bottom: 3rem;
   width: 50%;
 }
+section a:link, section a:visited {color: #000;}
+#works #portfolio{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.thumbnails {
+  width: 16rem;
+  height: 9rem;
+  background-color: brown;
+  margin: 2em;
+}
 
 /*pied de page*/
-footer{
+footer{padding: 0; margin: 0; width: 100%;
+  background-color: #7c7a48;
   align-items: center;
   flex-direction: column;
 }
-footer section{
-  background-color: black;
-
+footer section {  padding: 0;}
+footer textarea{  width: 100%;}
+footer #socials {background-color: #221e1b;
+  width: 100%; margin: 0; padding: 2em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-footer textarea{
-  width: 100%;
+footer #copyright {background-color: #221e1b;
+  width: 100%; margin: 0; padding: 2em 0 0 0; text-align: center; font-size: .8em;}
+footer #socials p {
+  margin: 0 1em; padding: .2em;
+  background-color: #333;
+  display: flex; justify-content: center; align-items: center;
+  height: 3em; width: 3em;
+  /*border: .3em solid #595959; */
+  border-radius: 50%;
+  transition: background-color .5s;
+}
+footer #socials p:hover{
+  background-color: #08FDD8;
+}
+footer a:link, footer a:visited {  color: #595959;}
+footer a:hover {
+  color: #000;
+  border: 0;
+}
+/*socicon*/
+.socicon-github, .socicon-linkedin {
+font-size: 2em;
+}
+
+/*media queries*/
+@media all and (max-width: 640px) {
+    header { align-items: center; justify-content: center;
+    }
+    #logo{
+      justify-content: center; text-align: center;
+    }
+    nav { text-align: center; }
+    nav ul { flex-direction: column; }
+    nav li{ padding: .2em; }
+    section {width: 90%}
+    #works #portfolio{ flex-direction: column;
+
+    }
 }

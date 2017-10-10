@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Alban Blanchard</title>
-    <link rel="stylesheet" href="css/master.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" />
+    <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?rd5re8" />
+    <link rel="stylesheet" href="css/master.css" />
   </head>
   <body>
     <header>
@@ -17,15 +18,15 @@
       </div>
         <nav>
           <ul>
-            <li><a href="#">À propos</a></li>
-            <li><a href="#">Mes compétences</a></li>
-            <li><a href="#">Réalisations</a></li>
-            <li><a href="#">Travaillons ensemble!</a></li>
+            <li><a href="#aboutMe">À propos</a></li>
+            <li><a href="#skills">Mes compétences</a></li>
+            <li><a href="#works">Réalisations</a></li>
+            <li><a href="#hireMe">Travaillons ensemble!</a></li>
           </ul>
         </nav>
     </header>
     <div id="content">
-      <section id="aboutme">
+      <section id="aboutMe">
         <h1>À propos</h1>
         <p>Après plusieurs année d'expérience en tant que designer web, j'ai choisi aujourd'hui d'évoluer en suivant la formation de développeur web de  l'<a href="#">E2N</a>.<br/>
         [...]</p>
@@ -49,12 +50,21 @@
       </section>
       <section id="works">
         <h1>Réalisations</h1>
+        <div id="portfolio">
         <div class="thumbnails">
+          <p>projet 1</p>
+          </div>
+          <div class="thumbnails">
+            <p>projet 2</p>
+            </div>
+            <div class="thumbnails">
+              <p>projet 3</p>
+              </div>
         </div>
       </section>
     </div>
     <footer>
-      <section>
+      <section id="hireMe">
         <h1>Me contacter</h1>
         <form method="post" action="#">
            <fieldset>
@@ -74,10 +84,12 @@
            <input type="submit" value="Envoyer" />
         </form>
       </section>
+      <section id="copyright">
+        <p>handmade by <a href="#logo">me</a> © 2017<br/>
+        100% recycled pixels</p>
+      </section>
       <section id="socials">
-        <h1>Réseaux</h1>
-        <p><a href="#">Github</a></p>
-        <p><a href="#">Linkedin</a></p>
+        <p><a href="https://github.com/albanblanchard" class="socicon-github"></a></p> <p><a href="https://www.linkedin.com/in/albanblanchard/" class="socicon-linkedin"></a></p>
       </section>
     </footer>
   </body>
