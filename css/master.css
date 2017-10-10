@@ -8,7 +8,7 @@ header, footer {
   padding: 2%;
   width: 96%;
   min-height: 20%;
-  background-color: #221e1b;
+  background-color: #35cc84;
   color: #fff;
   display: flex;
   flex-wrap: wrap;
@@ -45,14 +45,21 @@ margin:2%;
 
 nav { align-self: flex-end;}
 
-a:link, a:visited {
-  padding: .3em;
+nav a:link, a:visited {
+  padding: .6em;
   color: #fff;
   font-weight: 700;
   text-decoration: none;
-  transition: color .5s;
+  transition: text-shadow .3s;
+  transition: border-color .3s;
+  border: 1px dashed #35cc84;
+  border-radius: 5px;
+  text-shadow: 1px 1px #279662;
 }
-a:hover{ border-bottom: 1px solid #fff;}
+nav a:hover{
+  border-color: #279662;
+  text-shadow: none;
+}
 
 nav {
   margin: 0;
@@ -100,7 +107,7 @@ section a:link, section a:visited {color: #000;}
 
 /*pied de page*/
 footer{padding: 0; margin: 0; width: 100%;
-  background-color: #7c7a48;
+  /*background-color: #35cc84;*/
   align-items: center;
   flex-direction: column;
 }
@@ -126,7 +133,7 @@ footer #socials p {
 footer #socials p:hover{
   background-color: #08FDD8;
 }
-footer a:link, footer a:visited {  color: #595959;}
+footer a:link, footer a:visited {  color: #595959; text-decoration: none;}
 footer a:hover {
   color: #000;
   border: 0;
@@ -137,6 +144,9 @@ font-size: 2em;
 }
 
 /*media queries*/
+@media all and (max-width: 1024px) {
+    section {width: 75%}
+}
 @media all and (max-width: 640px) {
     header { align-items: center; justify-content: center;
     }
