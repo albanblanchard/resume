@@ -10,33 +10,75 @@
     <header>
       <div id="logo">
         <img src="img/logo01.png" alt="alban blanchard" />
-        <h1>Alban Blanchard</h1>
-        <p>Web developper, UX/UI designer</p>
+        <div id="me">
+          <h1>Alban&nbsp;Blanchard</h1>
+          <p>Développeur&nbsp;Web&nbsp;Junior</p>
+      </div>
       </div>
         <nav>
           <ul>
-            <li><a href="#">about me</a></li>
-            <li><a href="#">skills</a></li>
-            <li><a href="#">works</a></li>
-            <li><a href="#">hire me</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Mes compétences</a></li>
+            <li><a href="#">Réalisations</a></li>
+            <li><a href="#">Travaillons ensemble!</a></li>
           </ul>
         </nav>
-
     </header>
     <div id="content">
-      <div id="aboutme">
-        <h1>about me</h1>
-      </div>
-      <div id="skills">
-        <h1>skills</h1>
-      </div>
-      <div id="works">
-        <h1>works</h1>
-      </div>
+      <section id="aboutme">
+        <h1>À propos</h1>
+        <p>Après plusieurs année d'expérience en tant que designer web, j'ai choisi aujourd'hui d'évoluer en suivant la formation de développeur web de  l'<a href="#">E2N</a>.<br/>
+        [...]</p>
+        <p><a href="https://www.linkedin.com/in/albanblanchard/">Mon CV détaillé.</a></p>
+      </section>
+      <section id="skills">
+        <h1>Mes compétences</h1>
+        <ul>
+
+        <li><p>De bonnes connaissances en intégration HTML/CSS. J'ai souvent été amené à designer des templates Wordpress.</p></li>
+        <li><p>J'apprends aujourd'hui PHP et JavaScript.</p></li>
+        <li><p>Utilisation de Git/Github pour le versionning.</p></li>
+        <li><p>Je travaille sous les environnements Linux (Debian) et Windows.<br/>
+        Expérience personnelle de gestion d'un serveur sur raspberry, utilisation de la ligne de commande.</p></li>
+        <li><p>Une bonne connaissance de la suite Adobe. J'ai beaucoup travaillé avec le trio Illustrator / Photoshop / Dreamweaver.</p></li>
+        <li><p>UX/UI. En plus de l'élaboration de chartes graphiques et de la réalisation de maquettes, mon expérience de designer freelance m'a aussi permis de développer d'autres compétences.<br/>
+        Souvent impliqué dès les premières étapes du processus de conception, j'aime aider les clients à traduire des idées et des besoins en fonctionnalités web, avec le soucis permanent de l'ergonomie et d'une architecture d'information intuitive.<br/>
+        Un rôle un peu "caméléon", se mettre à la place du client et des futurs utilisateurs a été pour moi l'occasion de renouer avec ma formation initiale en sciences humaines (philosophie/sciences sociales).
+      </p></li>
+        </ul>
+      </section>
+      <section id="works">
+        <h1>Réalisations</h1>
+        <div class="thumbnails">
+        </div>
+      </section>
     </div>
     <footer>
-      <h1>Hire me</h1>
-
+      <section>
+        <h1>Me contacter</h1>
+        <form method="post" action="#">
+           <fieldset>
+             <legend>Vos coordonnées</legend> <!-- Titre du fieldset -->
+             <p><label for="nom">Quel est votre nom ?</label>
+             <input type="text" name="nom" id="nom" /></p>
+             <p><label for="prenom">Quel est votre prénom ?</label>
+             <input type="text" name="prenom" id="prenom" /></p>
+             <p><label for="email">Quel est votre e-mail ?</label>
+             <input type="email" name="email" id="email" required /></p>
+           </fieldset>
+           <fieldset>
+             <legend>Votre message : </legend>
+             <!-- <label for="message"</label><br /> -->
+             <textarea name="message" id="message" rows="10" cols="50" required> </textarea>
+           </fieldset>
+           <input type="submit" value="Envoyer" />
+        </form>
+      </section>
+      <section id="socials">
+        <h1>Réseaux</h1>
+        <p><a href="#">Github</a></p>
+        <p><a href="#">Linkedin</a></p>
+      </section>
     </footer>
   </body>
 </html>

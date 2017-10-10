@@ -6,64 +6,91 @@ html, body {margin: 0; padding: 0; height: 100%; width:100%;
 header, footer {
   padding: 2%;
   width: 96%;
-  min-height: 15%;
+  min-height: 20%;
   background-color: #000;
   color: #fff;
-  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
 }
-/*header:after, nav:after {
-  content: "";
-  display: block;
-  clear: both;
-}*/
+
+/*entête*/
+#logo {
+flex: 1;
+background-color: pink;
+margin: 0;
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-start;
+align-items: center;
+}
+
+#logo img {
+height: 5rem;
+margin:2%;
+}
+
+#logo h1 {
+  margin: 1% 0;
+  font-size: 2rem;
+}
+
+#logo p {
+  margin: 1% 0;
+  font-size: 1rem;
+}
+
+
+nav { background-color: blue; align-self: flex-end;}
 
 a:link, a:visited {
-  background-color: grey; color: black;
+  padding: .3em;
+  color: #fff;
+  font-weight: 700;
   text-decoration: none;
   transition: color .5s;
 }
-a:hover{ color: white; }
+a:hover{ border-bottom: 1px solid #fff;}
 
 nav {
-  /*background-color: pink;*/
   margin: 0;
   padding: 0;
-
-overflow: auto;
 }
 nav ul {
-float: right;
-  width: auto;
+  display: flex;
+  flex-direction: row;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-#logo {
-  /*background-color: pink;*/
-  margin: auto 0;
-position: relative;
-height : 5rem;
-max-width: 60%;
-
-float: left;}
-#logo h1 {float: left;
-  margin: 0;
-  font-size: 2rem;
-}
-#logo p {float: left;
-  font-size: 1rem;
-}
-#logo img {
-/*background-color: pink;*/
-/*width:10%;*/
-height: 5rem;
-float: left;
-margin: 0 2% 0 0;
+nav li {
+  margin: 0 1em;
 }
 
-#content {
-  min-height: 54%
+/*contenu - sections*/
+#content { background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*min-height: 54%;*/
+  /*margin 5% 20%;*/
 }
-footer {
+section{ background-color: white;
+  padding: 5%; margin-bottom: 3rem;
+  width: 50%;
+}
 
+/*pied de page*/
+footer{
+  align-items: center;
+  flex-direction: column;
+}
+footer section{
+  background-color: black;
+
+}
+footer textarea{
+  width: 100%;
 }
