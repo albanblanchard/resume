@@ -1,14 +1,13 @@
-/*css resume*/
 html, body {
   margin: 0; padding: 0; height: 100%; width:100%;
   font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+  background-color: #221e1b;
 }
-/*header {
-  position: fixed;
-}*/
-header, footer {
+
+header {
   padding: 2%;
-  width: 96%;
+  width: 100%;
   min-height: 20%;
   background-color: #35cc84;
   color: #fff;
@@ -17,7 +16,7 @@ header, footer {
   justify-content: flex-start;
   align-items: center;
 }
-
+header{z-index: 1;}
 /*entête*/
 #logo {
 flex: 1;
@@ -78,43 +77,13 @@ header nav li {
   margin: 0 1em;
 }
 
-/*contenu - sections*/
-#content {
-  /*background-color: yellow;*/
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /*min-height: 54%;*/
-  /*margin 5% 20%;*/
-}
-
-section {
-  height: 100vh;
-  /*background-color: white;*/
-  padding: 5%; margin-bottom: 3rem;
-  width: 50%;
-}
-section a:link, section a:visited {color: #000;}
-#works #portfolio{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.thumbnails {
-  width: 16rem;
-  height: 9rem;
-  background-color: brown;
-  margin: 2em;
-}
-
 /*pied de page*/
 footer{padding: 0; margin: 0; width: 100%;
   /*background-color: #35cc84;*/
   align-items: center;
   flex-direction: column;
 }
-footer section {  height: auto; padding: 0;}
+footer section {  padding: 0;}
 footer textarea{  width: 100%;}
 footer #socials {background-color: #221e1b;
   width: 100%; margin: 0; padding: 2em 0;
@@ -123,7 +92,7 @@ footer #socials {background-color: #221e1b;
   align-items: center;
 }
 footer #copyright {background-color: #221e1b;
- width: 100%; margin: 0; padding: 2em 0 0 0; text-align: center; font-size: .8em;}
+  width: 100%; margin: 0; padding: 2em 0 0 0; text-align: center; font-size: .8em;}
 footer #socials p {
   margin: 0 1em; padding: .2em;
   background-color: #333;
@@ -144,22 +113,4 @@ footer a:hover {
 /*socicon*/
 .socicon-github, .socicon-linkedin {
 font-size: 2em;
-}
-
-/*media queries*/
-@media all and (max-width: 1024px) {
-    section {width: 75%}
-}
-@media all and (max-width: 640px) {
-    header { align-items: center; justify-content: center;
-    }
-    #logo{
-      justify-content: center; text-align: center;
-    }
-    header nav { text-align: center; }
-    header nav ul { flex-direction: column; }
-    header nav li{ padding: .2em; }
-    section {height: auto; width: 90%}
-    #works #portfolio{ flex-direction: column;
-    }
 }
