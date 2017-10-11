@@ -3,13 +3,18 @@ html, body {
   margin: 0; padding: 0; height: 100%; width:100%;
   font-family: 'Raleway', sans-serif;
 }
-/*header {
+header {
+  /* animation magic */
+  -webkit-transition: all 0.4s ease-in-out
+  -moz-transition: all 0.4s ease-in-out
+  z-index: 9999;
+  top: 0;
   position: fixed;
-}*/
+}
 header, footer {
-  padding: 2%;
+  padding: 2rem 2%;
   width: 96%;
-  min-height: 20%;
+  min-height: 9rem;
   background-color: #2BC3CE;
   color: #fff;
   display: flex;
@@ -21,31 +26,32 @@ header, footer {
 /*entête*/
 #logo {
 flex: 1;
-/*background-color: pink;*/
-margin: 1em 0;
+background-color: pink;
+margin: 1rem 0;
 display: flex;
 flex-wrap: wrap;
 justify-content: flex-start;
 align-items: center;
 }
 
-#logo img {
+#logo-ab {background-color: blue;
 height: 5rem;
-margin:2%;
+margin:1rem;
 }
 
 #logo h1 {
-  margin: 1% 0;
+  margin: 1rem 0;
   font-size: 2rem;
 }
 
 #logo p {
-  margin: 1% 0;
+  margin: 1rem 0;
   font-size: 1rem;
 }
 
-
-header nav { align-self: flex-end;}
+header nav { background-color: red;
+  margin-bottom: 1rem;
+  align-self: flex-end;}
 
 header nav a:link, a:visited {
   padding: .6em;
@@ -63,10 +69,10 @@ header nav a:hover{
   text-shadow: none;
 }
 
-header nav {
+/*header nav {
   margin: 0;
   padding: 0;
-}
+}*/
 header nav ul {
   display: flex;
   flex-direction: row;
@@ -77,7 +83,19 @@ header nav ul {
 header nav li {
   margin: 0 1em;
 }
-
+/*shrink header*/
+.shrink-header {
+  min-height: auto;
+  margin: 0; padding: 0 2%;
+}
+.shrink-me {visibility: hidden;}
+.shrink-logo-ab {margin: 0;
+  transform: scale(.5);
+  position: absolute;
+  top: -1rem; left: -1rem;
+}
+.shrink-logo {margin: 0; padding: 0;text-align: left; height: 3rem;
+}
 /*contenu - sections*/
 #content {
   /*background-color: yellow;*/
@@ -87,6 +105,7 @@ header nav li {
   align-items: center;
   /*min-height: 54%;*/
   /*margin 5% 20%;*/
+  margin-top: 13rem;
 }
 
 section {

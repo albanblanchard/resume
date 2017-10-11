@@ -13,7 +13,7 @@
   <body>
     <header>
       <div id="logo">
-        <img src="img/logo01.png" alt="alban blanchard" />
+        <img id="logo-ab" src="img/logo01.png" alt="alban blanchard" />
         <div id="me">
           <h1>Alban&nbsp;Blanchard</h1>
           <p>Développeur&nbsp;Web&nbsp;Junior</p>
@@ -100,23 +100,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="js/velocity.min.js"></script>
     <script src="js/velocity.ui.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        // bind click event to all internal page anchors
-        $('a[href*="#"]').on('click', function (e) {
-            // prevent default action and bubbling
-            e.preventDefault();
-            e.stopPropagation();
-            // set target to anchor's "href" attribute
-            var target = $(this).attr('href');
-            // scroll to each target
-            $(target).velocity('scroll', {
-                duration: 1000,
-                offset: -40,
-                easing: 'easeOutCirc'
-                });
-            });
-          });
-    </script>
+    <script src="js/scripts.js"></script>
+    <!-- <script type="text/javascript"></script> -->
   </body>
 </html>
