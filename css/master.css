@@ -10,7 +10,7 @@ header, footer {
   padding: 2%;
   width: 96%;
   min-height: 20%;
-  background-color: #35cc84;
+  background-color: #2BC3CE;
   color: #fff;
   display: flex;
   flex-wrap: wrap;
@@ -54,12 +54,12 @@ header nav a:link, a:visited {
   text-decoration: none;
   transition: text-shadow .3s;
   transition: border-color .3s;
-  border: 1px dashed #35cc84;
+  border: 1px dashed #2BC3CE;
   border-radius: 5px;
-  text-shadow: 1px 1px #279662;
+  text-shadow: 1px 1px #1f9ea8;
 }
 header nav a:hover{
-  border-color: #279662;
+  border-color: #1f9ea8;
   text-shadow: none;
 }
 
@@ -91,11 +91,31 @@ header nav li {
 
 section {
   height: 100vh;
-  /*background-color: white;*/
-  padding: 5%; margin-bottom: 3rem;
-  width: 50%;
+  /*background-color: #689aa8;*/
+  /*padding: 5%;
+  margin-bottom: 3rem;*/
+  margin:0;
+  width: 100%;
+}
+section h1 {
+  margin:0; padding: .5% 25%;
+  background-color: #221e1b;
+  color: #FFF;
+  text-align: right;
+  /*text-transform: uppercase;*/
+  font-size: 2em;
+  font-style: oblique; font-weight: 700;
 }
 section a:link, section a:visited {color: #000;}
+#aboutMe {
+  background-color: #3DCB97;
+}
+#skills {
+  background-color: #9B59B6;
+}
+#works {
+  background-color: #F63656;
+}
 #works #portfolio{
   display: flex;
   flex-direction: row;
@@ -109,7 +129,9 @@ section a:link, section a:visited {color: #000;}
 }
 
 /*pied de page*/
-footer{padding: 0; margin: 0; width: 100%;
+footer{
+  background-color: #2BC3CE;
+  padding: 0; margin: 0; width: 100%;
   /*background-color: #35cc84;*/
   align-items: center;
   flex-direction: column;

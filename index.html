@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alban Blanchard</title>
+    <!-- <link rel="stylesheet" href="css/reset.css" /> -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" />
     <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?rd5re8" />
@@ -100,22 +101,22 @@
     <script src="js/velocity.min.js"></script>
     <script src="js/velocity.ui.min.js"></script>
     <script type="text/javascript">
-    $(document).ready(function () {
-  // bind click event to all internal page anchors
-  $('a[href*="#"]').on('click', function (e) {
-      // prevent default action and bubbling
-      e.preventDefault();
-      e.stopPropagation();
-      // set target to anchor's "href" attribute
-      var target = $(this).attr('href');
-      // scroll to each target
-      $(target).velocity('scroll', {
-          duration: 1000,
-          offset: -40,
-          easing: 'easeOutCirc'
-      });
-  });
-});
+      $(document).ready(function () {
+        // bind click event to all internal page anchors
+        $('a[href*="#"]').on('click', function (e) {
+            // prevent default action and bubbling
+            e.preventDefault();
+            e.stopPropagation();
+            // set target to anchor's "href" attribute
+            var target = $(this).attr('href');
+            // scroll to each target
+            $(target).velocity('scroll', {
+                duration: 1000,
+                offset: -40,
+                easing: 'easeOutCirc'
+                });
+            });
+          });
     </script>
   </body>
 </html>
