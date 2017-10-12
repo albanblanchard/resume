@@ -38,8 +38,9 @@ align-items: center;
 #logo-ab {background-color: blue;
 height: 5rem;
 margin:1rem;
+/*top:0;left:0;*/position: relative;
 }
-
+#me {background-color: red; }
 #logo h1 {
   margin: 1rem 0;
   font-size: 2rem;
@@ -86,13 +87,21 @@ header nav li {
   min-height: auto;
   margin: 0; padding: 0 2%;
 }
-.shrink-me {visibility: hidden;}
+.shrink-me-p {visibility: hidden;}
+.shrink-me-h1 {margin: 0;padding: 0; line-height: 2rem;}
+.shrink-me {margin: 0;padding: 0;
+height: 3rem;
+position: absolute;
+top: 0; left: 6rem;
+}
 .shrink-logo-ab {margin: 0;
   transform: scale(.5);
   position: absolute;
-  top: -1rem; left: -1rem;
+  top: -2rem; left: -3rem;
+
 }
 .shrink-logo {margin: 0; padding: 0;text-align: left; height: 3rem;
+position: relative;
 }
 /*contenu - sections*/
 #content {

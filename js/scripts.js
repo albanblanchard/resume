@@ -3,14 +3,18 @@ $(document).on("scroll", function(){
 		if
       ($(document).scrollTop() > 100){
 		  $("header").addClass("shrink-header");
-      $("#me").addClass("shrink-me");
+      $("#me p").addClass("shrink-me-p");
+			$("#me").addClass("shrink-me");
+			$("#me h1").addClass("shrink-me-h1");
       $("#logo-ab").addClass("shrink-logo-ab");
       $("#logo").addClass("shrink-logo");
 		}
 		else
 		{
 			$("header").removeClass("shrink-header");
-      $("#me").removeClass("shrink-me");
+      $("#me p").removeClass("shrink-me-p");
+			$("#me").removeClass("shrink");
+			$("#me h1").removeClass("shrink-me-h1");
       $("#logo-ab").removeClass("shrink-logo-ab");
       $("#logo").removeClass("shrink-logo");
 		}
@@ -22,8 +26,8 @@ $(document).on("scroll", function(){
     // bind click event to all internal page anchors
     $('a[href*="#"]').on('click', function (e) {
         // prevent default action and bubbling
-        e.preventDefault();
-        e.stopPropagation();
+        //e.preventDefault();
+        //e.stopPropagation();
         // set target to anchor's "href" attribute
         var target = $(this).attr('href');
 				// var headerOffset = document.getElementById('header').offsetHeight;
@@ -55,12 +59,15 @@ $(document).on("scroll", function(){
 			    if(numHijos < 2) {
 			      // hide the menu
 			      $(".mini-menu-options").hide("fast");
-
 			      var texto = $(this).text();
-
 			      $(".menu-select .menu-actual").text(texto);
+						// on initialise l'hamburger icon
+						$('#nav-icon2').toggleClass('open');
 			    }
 			    menuState = 0;
 			  });
-				
+				// hamburger icon
+				$('#nav-icon2').click(function(){
+					$(this).toggleClass('open');
+				});
       });
