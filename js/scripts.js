@@ -3,20 +3,24 @@ $(document).on("scroll", function(){
 		if
       ($(document).scrollTop() > 100){
 		  $("header").addClass("shrink-header");
-      $("#me p").addClass("shrink-me-p");
-			$("#me").addClass("shrink-me");
-			$("#me h1").addClass("shrink-me-h1");
-      $("#logo-ab").addClass("shrink-logo-ab");
-      $("#logo").addClass("shrink-logo");
+			$('#logo').css({"display":"none"});
+			$('#mini-logo').css({"display":"inherit"});
+      // $("#me p").addClass("shrink-me-p");
+			// $("#me").addClass("shrink-me");
+			// $("#me h1").addClass("shrink-me-h1");
+      // $("#logo-ab").addClass("shrink-logo-ab");
+      // $("#logo").addClass("shrink-logo");
 		}
 		else
 		{
 			$("header").removeClass("shrink-header");
-      $("#me p").removeClass("shrink-me-p");
-			$("#me").removeClass("shrink");
-			$("#me h1").removeClass("shrink-me-h1");
-      $("#logo-ab").removeClass("shrink-logo-ab");
-      $("#logo").removeClass("shrink-logo");
+			$('#mini-logo').css({"display":"none"});
+			$('#logo').css({"display":"inherit"});
+      // $("#me p").removeClass("shrink-me-p");
+			// $("#me").removeClass("shrink");
+			// $("#me h1").removeClass("shrink-me-h1");
+      // $("#logo-ab").removeClass("shrink-logo-ab");
+      // $("#logo").removeClass("shrink-logo");
 		}
 	});
 

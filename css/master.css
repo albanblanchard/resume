@@ -25,30 +25,64 @@ header, footer {
 }
 
 /*entête*/
-#logo {
-flex: 1;
-background-color: pink;
+#logo, #mini-logo {
+/*flex: 1;
+background-color: pink;*/
 margin: 1rem 0;
 display: flex;
 flex-wrap: wrap;
 justify-content: flex-start;
 align-items: center;
 }
-
-#logo-ab {background-color: blue;
+#mini-logo {
+display: none;
+}
+#logo a, #mini-logo a {margin: 0;padding: 0;}
+#logo-ab {
+/*background-color: blue;*/
 height: 5rem;
 margin:1rem;
-/*top:0;left:0;*/position: relative;
+/*position: relative;*/
 }
-#me {background-color: red; }
+#mini-logo #logo-ab {
+height: 3rem;
+margin:0 .5rem;
+}
+/*#me {
+  background-color: red;
+}*/
 #logo h1 {
   margin: 1rem 0;
   font-size: 2rem;
 }
-
+#mini-logo h1{
+  margin: 0;
+  font-size: 1.5rem;
+}
 #logo p {
   margin: 1rem 0;
   font-size: 1rem;
+}
+/*shrink header*/
+.shrink-header {
+  min-height: auto;
+  margin: 0; padding: 0 2%;
+}
+.shrink-me-p {visibility: hidden;}
+.shrink-me-h1 {margin: 0;padding: 0; line-height: 2rem;}
+.shrink-me {margin: 0;padding: 0;
+height: 3rem;
+position: absolute;
+top: 0; left: 6rem;
+}
+.shrink-logo-ab {margin: 0;
+  transform: scale(.5);
+  position: absolute;
+  top: -2rem; left: -3rem;
+
+}
+.shrink-logo {margin: 0; padding: 0;text-align: left; height: 3rem;
+position: relative;
 }
 /*menu*/
 /*
@@ -57,7 +91,7 @@ header nav { background-color: red;
   align-self: flex-end;}
 
 header nav a:link, a:visited {
-  padding: .6em;
+  padding: .6em
   color: #fff;
   font-weight: 700;
   text-decoration: none;
@@ -82,27 +116,7 @@ header nav li {
   margin: 0 1em;
 }*/
 
-/*shrink header*/
-.shrink-header {
-  min-height: auto;
-  margin: 0; padding: 0 2%;
-}
-.shrink-me-p {visibility: hidden;}
-.shrink-me-h1 {margin: 0;padding: 0; line-height: 2rem;}
-.shrink-me {margin: 0;padding: 0;
-height: 3rem;
-position: absolute;
-top: 0; left: 6rem;
-}
-.shrink-logo-ab {margin: 0;
-  transform: scale(.5);
-  position: absolute;
-  top: -2rem; left: -3rem;
 
-}
-.shrink-logo {margin: 0; padding: 0;text-align: left; height: 3rem;
-position: relative;
-}
 /*contenu - sections*/
 #content {
   /*background-color: yellow;*/
@@ -202,7 +216,9 @@ font-size: 2em;
     header { align-items: center; justify-content: center;
       /*position: relative;*/
     }
-    #logo{
+    #logo {display: none;}
+    #mini-logo {
+      display: inherit;
       justify-content: center; text-align: center;
     }
     /*header nav { text-align: center; }
