@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" />
     <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?rd5re8" />
     <link rel="stylesheet" href="css/master.css" />
+    <link rel="stylesheet" href="css/menu.css" />
   </head>
   <body>
-    <header>
+    <header id="header">
+
       <div id="logo">
         <img id="logo-ab" src="img/logo01.png" alt="alban blanchard" />
         <div id="me">
@@ -19,23 +21,53 @@
           <p>Développeur&nbsp;Web&nbsp;Junior</p>
       </div>
       </div>
-        <nav>
+        <!-- <nav>
           <ul>
             <li><a href="#aboutMe">À propos</a></li>
             <li><a href="#skills">Mes compétences</a></li>
             <li><a href="#works">Réalisations</a></li>
             <li><a href="#hireMe">Travaillons ensemble!</a></li>
           </ul>
-        </nav>
+        </nav> -->
+        <nav class="navbar-menu">
+          <!-- Menu normal -->
+          <ul class="menu">
+            <li><a href="#aboutMe">À propos</a></li>
+            <li><a href="#skills">Mes compétences</a></li>
+            <li><a href="#works">Réalisations</a></li>
+            <li><a href="#hireMe">Travaillons ensemble!</a></li>
+          </ul>
+        <!-- </nav>
+        <nav class="navbar-menu"> -->
+        <!-- Mini Menu -->
+        <nav class="navbar-mini-menu">
+          <div class="menu-select">
+            <span class="menu-actual">Menu</span>
+            <span class="btn-select"></span>
+          </div>
+          <ul class="mini-menu-options">
+            <li><a>Home</a></li>
+            <li><a href="#aboutMe" tabIndex="0">À propos</a></li>
+            <li><a href="#skills" tabIndex="0">Mes compétences</a></li>
+            <li><a href="#works" tabIndex="0">Réalisations</a></li>
+            <li><a href="#hireMe" tabIndex="0">Travaillons ensemble!</a></li>
+          </ul> <!-- Fin lista mini menu -->
+        </nav> <!-- Fin mini menu -->
+          </nav>
     </header>
+
     <div id="content">
+
       <section id="aboutMe">
         <div class="titles"><h1>À propos</h1></div>
-        <div class="section-content"><p>Après plusieurs années d'expérience en tant que designer web, j'ai choisi aujourd'hui d'évoluer en suivant la formation de développeur web de  l'<a href="#">E2N</a>.</p>
+        <div class="section-content"><p>Après plusieurs années d'expérience en tant que designer web, j'ai choisi aujourd'hui d'évoluer en suivant la formation simplon.co de développeur web à l'<a href="#">E2N</a>.</p>
         <p>L'essentiel de mon expérience du numérique s'est faite dans les domaines de la communication institutionnelle (CNRS), et de la communication politique (Les Verts).</p>
-        <p>Confronté à des projets où les développeurs manquaient, j'ai dû improviser quelques passages du côté du code qui ont attisé ma curiosité.</p>
+        <p>Confronté à des projets où les développeurs manquaient, j'ai dû souvent improviser quelques passages du côté du code. La renaissance de JavaScript et l'explosion des frameworks frontend ont fini par me décider à franchir le pas!</p>
         <p>...</p>
         <p><a href="https://www.linkedin.com/in/albanblanchard/">Mon CV détaillé.</a></p>
+        <p>
+/
+        </p>
       </div>
       </section>
       <section id="skills">
@@ -46,10 +78,10 @@
         <li><p>Utilisation de Git/Github pour le versionning.</p></li>
         <li><p>Je travaille sous les environnements Linux (Debian) et Windows.<br/>
         Expérience personnelle de gestion d'un serveur sur raspberry, utilisation de la ligne de commande.</p></li>
-        <li><p>Une bonne connaissance de la suite Adobe. J'ai beaucoup travaillé avec le trio Illustrator / Photoshop / Dreamweaver.</p></li>
+        <li><p>J'ai beaucoup travaillé avec le trio Adobe Illustrator / Photoshop / Dreamweaver.</p></li>
         <li><p>UX/UI. En plus de l'élaboration de chartes graphiques et de la réalisation de maquettes, mon expérience de designer freelance m'a aussi permis de développer d'autres compétences.<br/>
         Souvent impliqué dès les premières étapes du processus de conception, j'aime aider les clients à traduire des idées et des besoins en fonctionnalités web, avec le soucis permanent de l'ergonomie et d'une architecture d'information intuitive.<br/>
-        Un rôle un peu "caméléon", se mettre à la place du client et des futurs utilisateurs a été pour moi l'occasion de renouer avec ma formation initiale en sciences humaines (philosophie/sciences sociales).
+        Un rôle de "caméléon", en se mettant à la place du client et des futurs utilisateurs pour mieux appréhender leurs attentes j'ai renoué avec ma formation initiale en sciences humaines (philosophie/sciences sociales).
       </p></li>
     </ul></div>
       </section>
@@ -97,10 +129,41 @@
         <p><a href="https://github.com/albanblanchard" class="socicon-github"></a></p> <p><a href="https://www.linkedin.com/in/albanblanchard/" class="socicon-linkedin"></a></p>
       </section>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="js/velocity.min.js"></script>
     <script src="js/velocity.ui.min.js"></script>
     <script src="js/scripts.js"></script>
     <!-- <script type="text/javascript"></script> -->
+    <script type="text/javascript">
+    $(document).on("ready",function() {
+      // 0 = hide, 1 = visible
+      var menuState = 0;
+      //if($(".mini-menu-options").is(":hidden")) {
+        /* Add a Click event listener to btn-select */
+        $(".btn-select").on("click",function() {
+          if(menuState === 0) {
+            $(".mini-menu-options").slideDown("slow");
+            menuState = 1;
+          } else {
+            $(".mini-menu-options").slideUp("slow");
+            menuState = 0;
+          }
+        });
+      //}
+      $(".mini-menu-options li").on("click", function() {
+        var numHijos = $(this).children().length;
+        if(numHijos < 2) {
+          // hide the menu
+          $(".mini-menu-options").hide("fast");
+
+          var texto = $(this).text();
+
+          $(".menu-select .menu-actual").text(texto);
+        }
+        menuState = 0;
+      });
+    });
+    </script>
   </body>
 </html>

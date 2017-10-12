@@ -5,8 +5,9 @@ html, body {
 }
 header {
   /* animation magic */
-  -webkit-transition: all 0.4s ease-in-out
-  -moz-transition: all 0.4s ease-in-out
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s;
   z-index: 9999;
   top: 0;
   position: fixed;
@@ -48,7 +49,8 @@ margin:1rem;
   margin: 1rem 0;
   font-size: 1rem;
 }
-
+/*menu*/
+/*
 header nav { background-color: red;
   margin-bottom: 1rem;
   align-self: flex-end;}
@@ -68,11 +70,6 @@ header nav a:hover{
   border-color: #1f9ea8;
   text-shadow: none;
 }
-
-/*header nav {
-  margin: 0;
-  padding: 0;
-}*/
 header nav ul {
   display: flex;
   flex-direction: row;
@@ -82,7 +79,8 @@ header nav ul {
 }
 header nav li {
   margin: 0 1em;
-}
+}*/
+
 /*shrink header*/
 .shrink-header {
   min-height: auto;
@@ -193,13 +191,14 @@ font-size: 2em;
 }
 @media all and (max-width: 640px) {
     header { align-items: center; justify-content: center;
+      position: relative;
     }
     #logo{
       justify-content: center; text-align: center;
     }
-    header nav { text-align: center; }
+    /*header nav { text-align: center; }
     header nav ul { flex-direction: column; }
-    header nav li{ padding: .2em; }
+    header nav li{ padding: .2em; }*/
     section {height: auto; width: 90%}
     #works #portfolio{ flex-direction: column;
     }

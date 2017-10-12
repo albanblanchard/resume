@@ -25,6 +25,7 @@ $(document).on("scroll", function(){
         e.stopPropagation();
         // set target to anchor's "href" attribute
         var target = $(this).attr('href');
+				// var headerOffset = document.getElementById('header').offsetHeight;
         // scroll to each target
         $(target).velocity('scroll', {
             duration: 1000,
