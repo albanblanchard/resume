@@ -191,7 +191,7 @@ font-size: 2em;
 }
 @media all and (max-width: 640px) {
     header { align-items: center; justify-content: center;
-      position: relative;
+      /*position: relative;*/
     }
     #logo{
       justify-content: center; text-align: center;
