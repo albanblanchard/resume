@@ -1,0 +1,22 @@
+body {
+
+  padding-top: 10px;
+
+}
+
+[class*="col-"], footer, header {
+
+  background-color: lightgreen;
+
+  border: 2px solid black;
+
+  border-radius: 6px;
+
+  line-height: 40px;
+
+  text-align: center;
+
+}
+.col-lg-12 {line-height: 10rem;}
+
+section {line-height: 30rem; height: 30rem;}
