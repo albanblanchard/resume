@@ -8,47 +8,84 @@ body{
   font-size: 1.4rem;
 }
 header{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
   height:100vh;
   text-align: center;
   width: 100%;
   min-height: 350px;
-  background-color: #252a30;
-  background-image: url('../img/ab-bg.jpg');
+  background-color: #221e1b;
+  background-image: url('../img/ab-bg02.jpg');
   background-size: cover;
   background-position: center center;
   background-position-x: center;
   background-position-y: center;
   background-repeat: no-repeat;
-
   -moz-box-shadow: 0px 5px 10px 0px #9b9b9b;
--webkit-box-shadow: 0px 5px 10px 0px #9b9b9b;
--o-box-shadow: 0px 5px 10px 0px #9b9b9b;
-box-shadow: 0px 5px 10px 0px #9b9b9b;
-filter:progid:DXImageTransform.Microsoft.Shadow(color=#9b9b9b, Direction=180, Strength=10);
--moz-border-radius: 10px;
--webkit-border-radius: 10px;
-border-radius: 0 0 1rem 1rem;
+  -webkit-box-shadow: 0px 5px 10px 0px #9b9b9b;
+  -o-box-shadow: 0px 5px 10px 0px #9b9b9b;
+  box-shadow: 0px 5px 10px 0px #9b9b9b;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#9b9b9b, Direction=180, Strength=10);
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 0 0 1rem 1rem;
 }
-header img {height:25%; margin: 2%;}
-header>div, header nav{border: 1px solid green;
+#mask {
+  position: absolute;
+  background-color: #221e1b;
+  height:100%; width: 100%; margin: 0;
+  opacity: .4;
+  z-index: 0;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 0 0 1rem 1rem;
 }
+header img {
+  height:50%;
+  margin: 2%;
+}
+header #logo {
+  z-index: 1;
+  max-height: 25%;
+  /*background-color: green;*/
+}
+header #hello{
+  z-index: 1;
+  max-height: 40%;
+  /*background-color: red;*/
+}
+/*header>div{z-index: 2;}*/
 header>div>h1{
-  text-align: left;
+  /*text-align: left;*/
   font-size: 5rem;
   font-weight: 700;
-  max-width: 50%;
+  /*max-width: 50%;*/
+  color: #fff;
+  /*text-shadow: 0px 0px 4px #221e1b;*/
+  padding: 0 1rem;
 }
-  .container-fluid, .row{
+header>nav{
+  /*background-color: pink;*/
+  min-height: 35%;}
+/* ----------------------------------------------------------------
+bootstrap overide
+------------------------------------------------------------------*/
+.container-fluid, .row{
     margin: 0; padding: 0;
   }
-
+.col-md-12{
+  margin: 0; padding: 2rem;
+}
+.btn {font-weight: 700; border-radius: 2em; padding: .5em 1.5em; transition: all .2s ease-in;}
+.btn:hover{padding: .5em 2em;}
   /*
   ************************** media queries **************************
   */
-  @media all and (min-width:768px) AND (max-width: 992px) {
-    header>div>h1{ font-size: 3rem; }
+  @media all and (min-width:500px) AND (max-width: 992px) {
+    header>div>h1{ font-size: 4rem; }
   }
-  @media all and (max-width: 767px) {
-    header>div>h1{ font-size: 2rem; max-width: 100%; text-align: center;}
+  @media all and (max-width: 499px) {
+    header>div>h1{ font-size: 2.5rem;  }
   }
-  .col-md-12{margin: 0; padding: 2rem;}
