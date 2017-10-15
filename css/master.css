@@ -12,11 +12,9 @@ header{
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-  height:100vh;
+  min-height:100vh;
   text-align: center;
   width: 100%;
-  min-height: 350px;
-  background-color: #221e1b;
   background-image: url('../img/ab-bg02.jpg');
   background-size: cover;
   background-position: center center;
@@ -32,7 +30,7 @@ header{
   -webkit-border-radius: 10px;
   border-radius: 0 0 1rem 1rem;
 }
-#mask {
+header #mask {
   position: absolute;
   background-color: #221e1b;
   height:100%; width: 100%; margin: 0;
@@ -42,33 +40,45 @@ header{
   -webkit-border-radius: 10px;
   border-radius: 0 0 1rem 1rem;
 }
-header img {
-  height:50%;
-  margin: 2%;
-}
 header #logo {
   z-index: 1;
-  max-height: 25%;
+  max-height: 25vh;
   /*background-color: green;*/
 }
 header #hello{
   z-index: 1;
-  max-height: 40%;
+  max-height: 45vh;
   /*background-color: red;*/
 }
-/*header>div{z-index: 2;}*/
-header>div>h1{
-  /*text-align: left;*/
-  font-size: 5rem;
-  font-weight: 700;
-  /*max-width: 50%;*/
-  color: #fff;
-  /*text-shadow: 0px 0px 4px #221e1b;*/
-  padding: 0 1rem;
-}
-header>nav{
+header #navBlock{
   /*background-color: pink;*/
-  min-height: 35%;}
+display: flex;
+justify-content: center;
+align-items: flex-end;
+  min-height: 30vh;
+}
+header img {
+  height:50%;
+  margin: 2%;
+}
+header>div>h1{
+    font-size: 5rem;
+    font-weight: 700;
+    color: #fff;
+    padding: 0 1rem;
+  }
+  section {
+    display: flex;
+    /*flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;*/
+    min-height:350px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px dashed  #221e1b;
+    /*min-height: 350px;*/
+    /*background-color: #221e1b;*/
+  }
 /* ----------------------------------------------------------------
 bootstrap overide
 ------------------------------------------------------------------*/
@@ -80,6 +90,11 @@ bootstrap overide
 }
 .btn {font-weight: 700; border-radius: 2em; padding: .5em 1.5em; transition: all .2s ease-in;}
 .btn:hover{padding: .5em 2em;}
+.navbar-inverse {
+  background-color: inherit;
+  border: 0;
+  font-size: 2rem; font-weight: 700;
+}
   /*
   ************************** media queries **************************
   */
