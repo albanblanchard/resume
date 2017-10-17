@@ -1,77 +1,45 @@
-// shrink header on scroll
-$(document).on("scroll", function(){
-		if
-      ($(document).scrollTop() > 100){
-		  $("header").addClass("shrink-header");
-			$('#logo').css({"display":"none"});
-			$('#mini-logo').css({"display":"inherit"});
-      // $("#me p").addClass("shrink-me-p");
-			// $("#me").addClass("shrink-me");
-			// $("#me h1").addClass("shrink-me-h1");
-      // $("#logo-ab").addClass("shrink-logo-ab");
-      // $("#logo").addClass("shrink-logo");
-		}
-		else
-		{
-			$("header").removeClass("shrink-header");
-			$('#mini-logo').css({"display":"none"});
-			$('#logo').css({"display":"inherit"});
-      // $("#me p").removeClass("shrink-me-p");
-			// $("#me").removeClass("shrink");
-			// $("#me h1").removeClass("shrink-me-h1");
-      // $("#logo-ab").removeClass("shrink-logo-ab");
-      // $("#logo").removeClass("shrink-logo");
-		}
-	});
-
-
-  $(document).ready(function () {
-		// smooth scroll with nav
-    // bind click event to all internal page anchors
-    $('a[href*="#"]').on('click', function (e) {
-        // prevent default action and bubbling
-        //e.preventDefault();
-        //e.stopPropagation();
-        // set target to anchor's "href" attribute
-        var target = $(this).attr('href');
-				// var headerOffset = document.getElementById('header').offsetHeight;
-        // scroll to each target
-        $(target).velocity('scroll', {
-            duration: 1000,
-            offset: -75,
-            easing: 'easeOutCirc'
-            });
+function submitContactForm(){
+    var reg = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+    var name = $('#inputName').val();
+    var email = $('#inputEmail').val();
+    var message = $('#inputMessage').val();
+    if(name.trim() == '' ){
+        alert('Please enter your name.');
+        $('#inputName').focus();
+        return false;
+    }else if(email.trim() == '' ){
+        alert('Please enter your email.');
+        $('#inputEmail').focus();
+        return false;
+    }else if(email.trim() != '' && !reg.test(email)){
+        alert('Please enter valid email.');
+        $('#inputEmail').focus();
+        return false;
+    }else if(message.trim() == '' ){
+        alert('Please enter your message.');
+        $('#inputMessage').focus();
+        return false;
+    }else{
+        $.ajax({
+            type:'POST',
+            url:'contact.php',
+            data:'contactFrmSubmit=1&name='+name+'&email='+email+'&message='+message,
+            beforeSend: function () {
+                $('.submitBtn').attr("disabled","disabled");
+                $('.modal-body').css('opacity', '.5');
+            },
+            success:function(msg){
+                if(msg == 'ok'){
+                    $('#inputName').val('');
+                    $('#inputEmail').val('');
+                    $('#inputMessage').val('');
+                    $('.statusMsg').html('<span style="color:green;">Thanks for contacting us, we\'ll get back to you soon.</p>');
+                }else{
+                    $('.statusMsg').html('<span style="color:red;">Some problem occurred, please try again.</span>');
+                }
+                $('.submitBtn').removeAttr("disabled");
+                $('.modal-body').css('opacity', '');
+            }
         });
-
-				// hamburger menu
-				// 0 = hide, 1 = visible
-			  var menuState = 0;
-			  //if($(".mini-menu-options").is(":hidden")) {
-			    /* Add a Click event listener to btn-select */
-			    $(".btn-select").on("click",function() {
-			      if(menuState === 0) {
-			        $(".mini-menu-options").slideDown("slow");
-			        menuState = 1;
-			      } else {
-			        $(".mini-menu-options").slideUp("slow");
-			        menuState = 0;
-			      }
-			    });
-			  //}
-			  $(".mini-menu-options li").on("click", function() {
-			    var numHijos = $(this).children().length;
-			    if(numHijos < 2) {
-			      // hide the menu
-			      $(".mini-menu-options").hide("fast");
-			      var texto = $(this).text();
-			      $(".menu-select .menu-actual").text(texto);
-						// on initialise l'hamburger icon
-						$('#nav-icon2').toggleClass('open');
-			    }
-			    menuState = 0;
-			  });
-				// hamburger icon
-				$('#nav-icon2').click(function(){
-					$(this).toggleClass('open');
-				});
-      });
+    }
+}
