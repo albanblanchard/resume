@@ -11,28 +11,25 @@ body {
 p a:link, p a:visited { color: #000; }
 p a:hover {background-color: #221e1b; color: #2BC3CE;}
 /*titraille*/
-header>div>h1, header>div>p, #contact h2, #about h2, #skills h2, #expertise > div:first-child h2 {
+header #mask > div > h1, header #mask > div > p, #contact h2, #about h2, #skills h2, #expertise > div:first-child h2 {
   font-size: 5rem;
   font-weight: 700;
   color: #fff;
-  /*padding: 0 1rem;*/
+  padding: 0 1rem;
 }
+
 /***************************** HEADER *******************************/
 header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
-  min-height:100vh;
+  /*height: 100%;*/
+  min-height:100vh; width: 100%;
+  padding: 0; margin-bottom: 4rem;
   text-align: center;
-  width: 100%;
-  margin-bottom: 4rem;
   background-color: #fff;
   background-image: url('../img/ab-bg02.jpg');
   background-size: cover;
   background-position: center center;
-  background-position-x: center;
-  background-position-y: center;
+  /*background-position-x: center;
+  background-position-y: center;*/
   background-repeat: no-repeat;
   -moz-box-shadow: 0px 5px 10px 0px #9b9b9b;
   -webkit-box-shadow: 0px 5px 10px 0px #9b9b9b;
@@ -44,27 +41,23 @@ header {
   border-radius: 0 0 1rem 1rem;
 }
 header #mask {
-  position: absolute;
-  background-color: #221e1b;
-  height:100%; width: 100%; margin: 0;
-  opacity: .4;
-  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  /*position: absolute;*/
+  background-color: rgba(34, 30, 27, 0.4);
+  min-height: 100vh;
+  height:100%; width: 100%; margin: 0; padding: 0;
+  /*opacity: .4;
+  z-index: 0;*/
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 0 0 1rem 1rem;
 }
-header #logo {
-  z-index: 1;
-  max-height: 25vh;
-  /*background-color: green;*/
-}
-header #hello {
-  z-index: 2;
-  max-height: 45vh;
-  /*background-color: red;*/
-}
+header #logo { height: 25vh;}
+header #hello {  max-height: 45vh;}
 header #navBlock {
-  /*background-color: pink;*/
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -77,9 +70,10 @@ header img {
 header a#btn-header.btn {color: #221e1b;}
 header a#btn-header.btn:hover {color: #fff;}
 
-/***************************** A PROPOS *******************************/
+/**********************************************************************
+LAYOUT MODULES SECTIONS, TITRES + CONTENUS TEXTE
+**********************************************************************/
 #about, #skills {
-  /*background-color: pink; */
   /*float: none;*/
   padding: 0;
 }
@@ -106,14 +100,16 @@ header a#btn-header.btn:hover {color: #fff;}
   -webkit-border-radius: 0 0 1rem 1rem;
   border-radius: 0 .5rem .5rem 0;
 }
-#about h3, #skills h3 {text-align: center; margin-bottom: 1em;}
-#about .fa-lg {color:#000; font-size: 2em;}
-#about h3 span {display: block;margin-top: 1em;}
-#about > div p, #skills > div p, {padding:0 3rem; }
-#about > div p:first-child, #skills > div p:first-child {padding: 3rem;}
-#about > div p+p, #skills > div p+p {padding-bottom: 3rem;}
 
-/***************************** CE QUE JE FAIS *******************************/
+/******************************* A PROPOS ************************************/
+#about h3, #skills h3 { text-align: center; margin-bottom: 1em;}
+#about .fa-lg { color:#000; font-size: 2em;}
+#about h3 span { display: block; margin-top: 1em;}
+#about > div p, #skills > div p, { padding:0 3rem; }
+#about > div p:first-child, #skills > div p:first-child { padding: 3rem;}
+#about > div p+p, #skills > div p+p { padding-bottom: 3rem;}
+
+/*****************************  CE QUE JE FAIS *******************************/
 #expertise {
   background: #fcfcfc;
   background: -moz-linear-gradient(45deg,  #fcfcfc 0%, #fcfcfc 51%, #eaeaea 100%);
@@ -136,8 +132,11 @@ header a#btn-header.btn:hover {color: #fff;}
   font-style: italic;
   font-size: 4rem;
 }
+#skills > div > div > div > p {margin: 0;padding: 0; }
+#skills .pictos {height: 6em;  margin: 2em 0 0 0;}
+#skills .pictos img {max-height: 90%;}
+#portfolio{}
 
-#skills {}
 #contact { background-color: #ffb751; min-height: 50vh;}
 #contact div { box-shadow: none; }
 #contact h2 { padding: 0; margin: 0; }
@@ -145,9 +144,10 @@ header a#btn-header.btn:hover {color: #fff;}
 #contact h2 + p { margin-top: 2%; }
 #contact p + p { margin-top: 5%; }
 
-section.row { padding-bottom: 4rem;
--moz-box-shadow: 0px 10px 10px 0px #9b9b9b;
-box-shadow: 0px 10px 10px 0px #9b9b9b;
+section.row {
+  padding-bottom: 4rem;
+  -moz-box-shadow: 0px 10px 10px 0px #9b9b9b;
+  box-shadow: 0px 10px 10px 0px #9b9b9b;
 }
 
 /*section > div > div {
@@ -199,12 +199,13 @@ footer a:hover {
 .socicon-github, .socicon-linkedin {
   font-size: 2em;
 }
+
 /* ----------------------------------------------------------------
 bootstrap overide
 ------------------------------------------------------------------*/
 .container-fluid, .row{
-    margin: 0; padding: 0;
-  }
+  margin: 0; padding: 0;
+}
 .col-md-12{
   margin: 0; padding: 2rem;
 }
@@ -218,7 +219,7 @@ bootstrap overide
   font-size: 2rem; font-weight: 700;
   color: #fff;
 }
-header #navBlock .navbar-collapse{
+header #navBlock .navbar-collapse {
   border: none;
   box-shadow: none;
   -webkit-box-shadow: none;
@@ -242,12 +243,29 @@ header #navBlock .navbar-toggle:hover {
   opacity: .7;
 }
 
-  /*
-  ************************** media queries **************************
-  */
-  @media all and (min-width:500px) AND (max-width: 992px) {
-    header>div>h1, header>div>p { font-size: 4rem; }
-  }
-  @media all and (max-width: 499px) {
-    header>div>h1, header>div>p { font-size: 2.5rem;  }
-  }
+/*
+************************** media queries **************************
+*/
+@media all and (min-width:500px) AND (max-width: 992px) {
+  body{font-size: 1.4em;}
+  header #mask > div > h1, header #mask > div > p { font-size: 4rem; }
+  #about h2, #skills h2, #expertise > div:first-child h2, #contact h2 { font-size: 4rem; }
+  #contact p { font-size: 2rem; }
+}
+@media all and (max-width: 499px) {
+  body{font-size: 1.4em;}
+  header #mask > div > h1, header #mask > div > p { font-size: 2rem;  }
+  #about h2, #skills h2, #expertise > div:first-child h2, #contact h2  { font-size: 3rem; }
+  #contact p { font-size: 2rem; }
+}
+@media all and (max-height: 480px) {
+  header #logo, header #logo a {  height: 10vh;}
+  header #hello {  min-height: 40vh; }
+  header #navBlock {  min-height: 30vh; }
+  header img { max-height:100%;}
+  header #navBlock .navbar-toggle {  height: auto; width: auto;
+    font-size: 2em;}
+  .navbar-nav > li > a { margin:0 0 .5em 0; padding:0;}
+  header #mask > div > h1 {margin-top: 2em;}
+  header #mask > div > p {margin-bottom: 1em;}
+}
