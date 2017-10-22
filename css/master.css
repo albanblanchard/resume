@@ -5,7 +5,7 @@ html, body {
 }
 body {
   font-family: 'Raleway', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 /*liens*/
 p a:link, p a:visited { color: #000; }
@@ -71,7 +71,7 @@ header a#btn-header.btn {color: #221e1b;}
 header a#btn-header.btn:hover {color: #fff;}
 
 /**********************************************************************
-LAYOUT MODULES SECTIONS, TITRES + CONTENUS TEXTE
+LAYOUT MODULES de SECTIONS, TITRES + CONTENUS TEXTE
 **********************************************************************/
 #about, #skills {
   /*float: none;*/
@@ -101,15 +101,15 @@ LAYOUT MODULES SECTIONS, TITRES + CONTENUS TEXTE
   border-radius: 0 .5rem .5rem 0;
 }
 
-/******************************* A PROPOS ************************************/
-#about h3, #skills h3 { text-align: center; margin-bottom: 1em;}
-#about .fa-lg { color:#000; font-size: 2em;}
-#about h3 span { display: block; margin-top: 1em;}
-#about > div p, #skills > div p, { padding:0 3rem; }
-#about > div p:first-child, #skills > div p:first-child { padding: 3rem;}
-#about > div p+p, #skills > div p+p { padding-bottom: 3rem;}
+/******************************* ABOUT ME************************************/
+#about h3 { text-align: center; margin-bottom: 1em; }
+#about .fa-lg { color:#000; font-size: 2em; }
+#about h3 span { display: block; margin-top: 1em; }
+#about > div p { padding:0 3rem; }
+#about > div p:first-child { padding: 3rem; }
+#about > div p+p { padding-bottom: 3rem; }
 
-/*****************************  CE QUE JE FAIS *******************************/
+/*****************************  WHAT I DO ***********************************/
 #expertise {
   background: #fcfcfc;
   background: -moz-linear-gradient(45deg,  #fcfcfc 0%, #fcfcfc 51%, #eaeaea 100%);
@@ -132,9 +132,20 @@ LAYOUT MODULES SECTIONS, TITRES + CONTENUS TEXTE
   font-style: italic;
   font-size: 4rem;
 }
-#skills > div > div > div > p {margin: 0;padding: 0; }
-#skills .pictos {height: 6em;  margin: 2em 0 0 0;}
-#skills .pictos img {max-height: 90%;}
+/*#skills > div > div > div > p {margin: 0;padding: 0; }*/
+#skills > div > div.row > div {padding: 0;}
+#skills > div > div.row > div > div.row:first-child {padding: 10% 0 0 0;}
+#skills > div > div.row > div > div.row > .pictos { text-align: center; padding: 0;border: 1px dashed black; }
+#skills > div > div.row > div > div.row > .pictos.pictos > img {
+  /*display: block;*/
+  /*height: auto ; width: 5em;*/
+  border: 1px dashed black;
+  padding: 0; margin: 0 .2em;
+}
+
+#skills p {margin: 1em 0;padding: 0 3rem;}
+#skills > div > div.row > div > div.row { }
+
 #portfolio{}
 
 #contact { background-color: #ffb751; min-height: 50vh;}
@@ -201,7 +212,7 @@ footer a:hover {
 }
 
 /* ----------------------------------------------------------------
-bootstrap overide
+bootstrap classes overide
 ------------------------------------------------------------------*/
 .container-fluid, .row{
   margin: 0; padding: 0;
@@ -247,9 +258,10 @@ header #navBlock .navbar-toggle:hover {
 ************************** media queries **************************
 */
 @media all and (min-width:500px) AND (max-width: 992px) {
-  body{font-size: 1.4em;}
+  body{font-size: 1.6em;}
   header #mask > div > h1, header #mask > div > p { font-size: 4rem; }
   #about h2, #skills h2, #expertise > div:first-child h2, #contact h2 { font-size: 4rem; }
+  /*.pictos > img { height: 3em;}*/
   #contact p { font-size: 2rem; }
 }
 @media all and (max-width: 499px) {
@@ -257,6 +269,7 @@ header #navBlock .navbar-toggle:hover {
   header #mask > div > h1, header #mask > div > p { font-size: 2rem;  }
   #about h2, #skills h2, #expertise > div:first-child h2, #contact h2  { font-size: 3rem; }
   #contact p { font-size: 2rem; }
+  /*.pictos > img { height: 3em;}*/
 }
 @media all and (max-height: 480px) {
   header #logo, header #logo a {  height: 10vh;}
