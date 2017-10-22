@@ -10,7 +10,7 @@ body {
 /*liens*/
 p a:link, p a:visited { color: #000; }
 p a:hover {background-color: #221e1b; color: #2BC3CE;}
-/*titraille*/
+/**************************** TITRAILLE ***************************************/
 header #mask > div > h1, header #mask > div > p, #contact h2, #about h2, #skills h2, #expertise > div:first-child h2 {
   font-size: 5rem;
   font-weight: 700;
@@ -18,9 +18,8 @@ header #mask > div > h1, header #mask > div > p, #contact h2, #about h2, #skills
   padding: 0 1rem;
 }
 
-/***************************** HEADER *******************************/
+/******************************* HEADER / ECRAN 1 *****************************/
 header {
-  /*height: 100%;*/
   min-height:100vh; width: 100%;
   padding: 0; margin-bottom: 4rem;
   text-align: center;
@@ -80,8 +79,13 @@ header img {
 }
 
 /**********************************************************************
-LAYOUT MODULES de SECTIONS, TITRES + CONTENUS TEXTE
+LAYOUT MODULES de SECTIONS, TITRES BANIERES + ENCARTS TEXTE
 **********************************************************************/
+section.row {
+  padding-bottom: 4rem;
+  -moz-box-shadow: 0px 10px 10px 0px #9b9b9b;
+  box-shadow: 0px 10px 10px 0px #9b9b9b;
+}
 #about, #skills {
   /*float: none;*/
   padding: 0;
@@ -99,7 +103,7 @@ LAYOUT MODULES de SECTIONS, TITRES + CONTENUS TEXTE
 #about > div:nth-child(2), #skills > div:nth-child(2) {
   background-color: #fff;
   margin: -1.5em 1.5em 0;
-  border-radius: 1em;
+  /*border-radius: 1em;*/
   -moz-box-shadow: 0px 5px 10px 0px #9b9b9b;
   -webkit-box-shadow: 0px 5px 10px 0px #9b9b9b;
   -o-box-shadow: 0px 5px 10px 0px #9b9b9b;
@@ -118,7 +122,7 @@ LAYOUT MODULES de SECTIONS, TITRES + CONTENUS TEXTE
 #about > div p:first-child { padding: 3rem; }
 #about > div p+p { padding-bottom: 3rem; }
 
-/*****************************  WHAT I DO ***********************************/
+/*******************************  WHAT I DO ***********************************/
 #expertise {
   background: #fcfcfc;
   background: -moz-linear-gradient(45deg,  #fcfcfc 0%, #fcfcfc 51%, #eaeaea 100%);
@@ -141,21 +145,20 @@ LAYOUT MODULES de SECTIONS, TITRES + CONTENUS TEXTE
   font-style: italic;
   font-size: 4rem;
 }
-/*#skills > div > div > div > p {margin: 0;padding: 0; }*/
+/*mes compétences*/
 #skills > div > div.row > div {padding: 0;}
 #skills > div > div.row > div > div.row:first-child {padding: 10% 10% 0 10%;}
 #skills > div > div.row > div > div.row > .pictos { text-align: center; padding: 0; }
 #skills > div > div.row > div > div.row > .pictos.pictos > img {
-  /*display: block;*/
-  /*height: auto ; width: 5em;*/
   /*border: 1px dashed black;*/
   padding: 0; margin: 0 .2em;
 }
-
 #skills p {margin: 1em 0; padding: 0 3rem;}
 #skills > div > div.row > div > div.row { }
-
+/*réalisations*/
 #portfolio{}
+
+/*****************************  CONACT / HIRE ME ******************************/
 
 #contact { background-color: #ffb751; min-height: 50vh;}
 #contact div { box-shadow: none; }
@@ -164,11 +167,7 @@ LAYOUT MODULES de SECTIONS, TITRES + CONTENUS TEXTE
 #contact h2 + p { margin-top: 2%; }
 #contact p + p { margin-top: 5%; }
 
-section.row {
-  padding-bottom: 4rem;
-  -moz-box-shadow: 0px 10px 10px 0px #9b9b9b;
-  box-shadow: 0px 10px 10px 0px #9b9b9b;
-}
+
 
 footer {
   min-height: 25vh;
