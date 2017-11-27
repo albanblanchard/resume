@@ -1,0 +1,25 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "main": "index.html",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "popper.js": "^1.12.9",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albanblanchard/resume.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albanblanchard/resume/issues"
+  },
+  "homepage": "https://github.com/albanblanchard/resume#readme",
+  "description": ""
+}
