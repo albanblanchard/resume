@@ -12,8 +12,8 @@
   <!-- STYLESHEETS -->
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
   <link rel="stylesheet" href="css/master.css" />
-  <link rel="stylesheet" href="css/style.css" />
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
 </head>
@@ -50,12 +50,12 @@
         <div><!-- block section w/ boxshadow -->
           <div class="row">
             <div class="col-sm-6">
-              <h3><i class="fa fa-eye fa-lg" aria-hidden="true"></i><br/><span>Designer</span></h3>
-              <p>Plus de 10 années d'expérience en tant que designer web dans les domaines de la communication institutionnelle (CNRS), et de la communication politique (Les Verts).</p>
-            </div>
-            <div class="col-sm-6">
               <h3><i class="fa fa-code fa-lg" aria-hidden="true"></i><br/><span>Développeur web</span></h3>
               <p>Développeur junior! Aujourd'hui c'est en suivant une formation <a href="https://simplon.co">Simplon</a> à l'<a href="#"><abbr title="Ecole numérique du Noyonnais">E2N</abbr></a> que j'ai choisi d'évoluer.</p>
+            </div>
+            <div class="col-sm-6">
+              <h3><i class="fa fa-eye fa-lg" aria-hidden="true"></i><br/><span>Designer</span></h3>
+              <p>Plus de 10 années d'expérience en tant que designer web dans les domaines de la communication institutionnelle (CNRS), et de la communication politique (Les Verts).</p>
             </div>
           </div>
           <div class="row">
@@ -106,7 +106,6 @@
               </div>
             </div>
 
-
             <div class="row">
               <!-- environnement de travail -->
               <div class="col-sm-6">
@@ -119,7 +118,7 @@
                   <div class="col-md-12">
                     <p>Gestion du versionning avec Git et Github.</p>
                     <p>Je travaille sous les environnements Linux (Debian) et Windows.</p>
-                    <p>Expérience personnelle de gestion d'un serveur sur raspberry, utilisation de la ligne de commande.</p>
+                    <p>Expérience personnelle de gestion d'un serveur sur Raspberry, administration linux, ligne de commande, Bash scripts.</p>
                   </div>
                 </div>
               </div>
@@ -135,20 +134,73 @@
                 <div class="row">
                   <div class="col-md-12">
                     <p>UX/UI. J'ai beaucoup travaillé avec le trio Adobe Illustrator / Photoshop / Dreamweaver.</p>
-                    <p>En plus de l'élaboration de chartes graphiques et de la réalisation de maquettes, mon expérience de designer freelance m'a aussi permis de développer d'autres compétences.</p>
-                    <p>Souvent impliqué dès les premières étapes du processus de conception, j'aime aider les clients à traduire des idées et des besoins en fonctionnalités web, avec le soucis permanent de l'ergonomie et d'une architecture d'information intuitive.</p>
-                    <p>Un rôle de "caméléon", en se mettant à la place du client et des futurs utilisateurs pour mieux appréhender leurs attentes j'ai renoué avec ma formation initiale en sciences humaines (philosophie/sciences sociales).</p>
+                    <p>En plus de l'élaboration de chartes graphiques et de la réalisation de maquettes, j'ai souvent été impliqué dès les premières étapes de conception.</p>
+                    <p>J'aime aider les clients à traduire des idées et des besoins en fonctionnalités web, avec le soucis permanent de l'ergonomie et d'une architecture d'information intuitive.</p>
+                    <p>En devant me mettre à la place du client et des utilisateurs j'ai pu renouer avec certains aspects de ma formation initiale en sciences humaines (philosophie/sciences sociales).</p>
                   </div>
                 </div>
 
               </div>
             </div>
             <!--
+<<<<<<< HEAD
             <div id="portfolio" class="col-lg-offset-2 col-lg-8">
             <h2>Réalisations</h2>
             <div>
             <div class="thumbnails">
             <p>projet 1</p>
+=======
+    <div id="portfolio" class="col-lg-offset-2 col-lg-8">
+    <h2>Réalisations</h2>
+    <div>
+    <div class="thumbnails">
+    <p>projet 1</p>
+  </div>
+  </div>
+</div>
+ -->
+</div>
+</div>
+</section>
+<section id="contact" class="row text-center">
+  <div class="col-lg-offset-2 col-lg-8">
+    <h2>Vous recherchez un développeur&nbsp;?</h2>
+    <p>Ou pour simplement discuter web devant un café :</p>
+    <button class="btn btn-warning btn-lg" data-toggle="modal" data-target="#modalForm">
+      <i class="fa fa-coffee" aria-hidden="true"></i><br/>Envoyez-moi un message!
+    </button>
+    <!-- <p><a href="#modal-contact" type="button" data-toggle="modal" class="btn btn-warning btn-lg"><i class="fa fa-coffee" aria-hidden="true"></i><br/>Envoyez-moi un message!</a></p> -->
+    <!-- modal -->
+    <div class="modal fade" id="modalForm" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!-- <button type="button" class="close" data-dismiss="modal">x</button> -->
+            <button type="button" class="close" data-dismiss="modal">
+              <span aria-hidden="true">&times;</span>
+              <span class="sr-only">Close</span>
+            </button>
+            <!-- <h4 class="modal-title">contact</h4> -->
+          </div>
+          <div class="modal-body">
+            <!-- formulaire -->
+            <p class="statusMsg"></p>
+            <form role="form">
+              <div class="form-group">
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Enter your name"/>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail">Email</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email"/>
+              </div>
+              <div class="form-group">
+                <label for="inputMessage">Message</label>
+                <textarea class="form-control" id="inputMessage" placeholder="Enter your message"></textarea>
+              </div>
+            </form>
+            <!-- fin formulaire -->
+>>>>>>> 94b3ff61d3afa2d2215c49c579ada504f02691bd
           </div>
           <div class="thumbnails">
           <p>projet 2</p>
@@ -207,22 +259,22 @@
       <!-- fin modal -->
     </div>
 
+</section>
+<footer id="footer" class="row">
+  <section id="copyright" class="col-lg-12">
+    <p>Garantie fait main, 100% pixels recyclés.</p>
+      <p><a href="#logo">me</a> © 2017 </p>
+    </section>
+    <section id="socials" class="col-lg-12">
+      <p><a href="https://github.com/albanblanchard" class="socicon-github"></a></p> <p><a href="https://www.linkedin.com/in/albanblanchard/" class="socicon-linkedin"></a></p>
+    </section>
+  </footer>
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
 
-
-  </section>
-  <footer id="footer" class="row">
-    <section id="copyright" class="col-lg-12">
-      <p>handmade by <a href="#logo">me</a> © 2017<br/>
-        100% recycled pixels</p>
-      </section>
-      <section id="socials" class="col-lg-12">
-        <p><a href="https://github.com/albanblanchard" class="socicon-github"></a></p> <p><a href="https://www.linkedin.com/in/albanblanchard/" class="socicon-linkedin"></a></p>
-      </section>
-    </footer>
-  </div>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/validator.min.js"></script>
-  <script src="js/scripts.js"></script>
-  <script src="js/velocity.min.js"></script>
+<!-- <script src="js/validator.min.js"></script> -->
+<script src="js/scripts.js"></script>
+<script src="js/velocity.min.js"></script>
 </body>
 </html>

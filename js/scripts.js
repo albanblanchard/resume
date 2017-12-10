@@ -34,9 +34,9 @@ $(document).ready(function () {
         var target = $(this).attr('href');
         // scroll to each target
         $(target).velocity('scroll', {
-            duration: 800,
-            offset: 0,
-            easing: 'ease-in-out'
+            duration: 1000,
+            // offset: 0,
+            easing: 'easeOutExpo'
         });
     });
 });
