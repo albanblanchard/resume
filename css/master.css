@@ -79,7 +79,7 @@ header img {
 }
 
 /**********************************************************************
-LAYOUT MODULES de SECTIONS, TITRES BANIERES + ENCARTS TEXTE
+LAYOUT MODULES de SECTIONS, BANDEAUX TITRES + ENCARTS TEXTE
 **********************************************************************/
 /*section.row {
   padding-bottom: 4rem;
@@ -156,7 +156,7 @@ LAYOUT MODULES de SECTIONS, TITRES BANIERES + ENCARTS TEXTE
 #skills p {margin: 1em 0; padding: 0 3rem;}
 #skills > div > div.row > div > div.row { }
 /*réalisations*/
-#portfolio{}
+/*#portfolio{}*/
 
 /*****************************  CONTACT / HIRE ME ******************************/
 
@@ -269,6 +269,7 @@ header #navBlock .navbar-toggle:hover {
   /*.pictos > img { height: 3em;}*/
   #contact p { font-size: 2rem; }
 }
+
 @media all and (max-width: 499px) {
   body{font-size: 1.4em;}
   header #mask > div > h1, header #mask > div > p { font-weight: normal; font-size: 2rem;  }
@@ -276,7 +277,8 @@ header #navBlock .navbar-toggle:hover {
   #contact p { font-size: 2rem; }
   #skills p, #about > div p { padding: 0 1rem;}
 }
-@media all  and (max-height: 480px) {
+
+@media all and (max-height: 480px) {
   header #logo, header #logo a {  height: 15vh; position: absolute; top: 0; left: 0;margin: .5em;}
   header #hello {  max-height: 100vh; }
   header #navBlock {  display: block; height: auto; position: absolute; top: 0; right: 0;margin:0; padding: 0;}
@@ -287,7 +289,7 @@ header #navBlock .navbar-toggle:hover {
     margin: .5em .5em 0 0;
     float: right;
   }
-    header #navBlock .navbar-collapse {text-align: right; margin: 0 1em 0 0;}
+  header #navBlock .navbar-collapse {text-align: right; margin: 0 1em 0 0;}
   .navbar-nav > li > a { margin:0 0 .5em 0; padding:0;}
   header #mask > div > h1 {font-weight: normal; font-size: 1.3em; margin-top: .5em;}
   header #mask > div > p {font-weight: normal; font-size: 1.3em; margin-bottom: 1em;}
