@@ -8,7 +8,7 @@ body {
   font-size: 1.8rem;
 }
 /*liens*/
-p a:link, p a:visited { color: #000; }
+p a:link, p a:visited { color: #000; text-decoration: underline;}
 p a:hover {background-color: #221e1b; color: #2BC3CE;}
 /**************************** TITRAILLE ***************************************/
 header #mask > div > h1, header #mask > div > p, #contact h2, #about h2, #skills h2, #expertise > div:first-child h2 {
@@ -77,6 +77,9 @@ header img {
   border-width: 3px;
   color: #eea236;
 }
+#btn-header {
+  text-decoration: none;
+}
 
 /**********************************************************************
 LAYOUT MODULES de SECTIONS, BANDEAUX TITRES + ENCARTS TEXTE
@@ -90,6 +93,7 @@ LAYOUT MODULES de SECTIONS, BANDEAUX TITRES + ENCARTS TEXTE
   /*float: none;*/
   padding: 0 0 4rem 0;
 }
+/*bloc qui contient le titre de section h2*/
 #about > div:nth-child(1), #skills > div:nth-child(1) {
   background: -moz-linear-gradient(45deg,  rgba(252,252,252,0) 0%, rgba(254,191,4,1) 66%);
   background: -webkit-linear-gradient(45deg,  rgba(252,252,252,0) 0%,rgba(254,191,4,1) 66%);
@@ -100,9 +104,11 @@ LAYOUT MODULES de SECTIONS, BANDEAUX TITRES + ENCARTS TEXTE
   font-style: italic;
   border-radius: 0 .5rem .5rem 0;
  }
-#about > div:nth-child(2), #skills > div:nth-child(2) {
+ /*bloc de contenu de section avec box shadow*/
+#about > div.blockShadow, #skills > div:nth-child(2) {
   background-color: #fff;
-  margin: -1.5em 1.5em 0;
+  /*margin: -1.5em 1.5em 0;*/
+  margin: 1.5em;
   /*border-radius: 1em;*/
   -moz-box-shadow: 0px 5px 10px 0px #9b9b9b;
   -webkit-box-shadow: 0px 5px 10px 0px #9b9b9b;
@@ -113,6 +119,8 @@ LAYOUT MODULES de SECTIONS, BANDEAUX TITRES + ENCARTS TEXTE
   -webkit-border-radius: 0 0 1rem 1rem;
   border-radius: 0 .5rem .5rem 0;
 }
+/*marge négative pour superposition blocs titres de sections et blocs contenus sections*/
+#about > div:nth-child(2), #skills > div:nth-child(2) {  margin: -1.5em 1.5em 0; }
 
 /******************************* ABOUT ME************************************/
 #about h3 { text-align: center; margin-bottom: 1em; }
@@ -120,7 +128,13 @@ LAYOUT MODULES de SECTIONS, BANDEAUX TITRES + ENCARTS TEXTE
 #about h3 span { display: block; margin-top: 1em; }
 #about > div p { padding:0 3rem; }
 #about > div p:first-child { padding: 3rem; }
-#about > div p+p { padding-bottom: 3rem; }
+#about > div p:last-child { padding-bottom: 3rem; }
+/*#about #opquast .thumb {text-align: center;}*/
+#about #opquast h3, #about #scholarship h3 { text-align: left; }
+#about #opquast .row, #about #scholarship .row { padding:1em; }
+#about #opquast div p, #about #scholarship div p { padding:0 ; }
+#about #scholarship .pictos {display: flex; align-items: center; justify-content: center; height: 10em;}
+/*#about #scholarship .pictos h3 {text-align: center;}*/
 
 /*******************************  WHAT I DO ***********************************/
 #expertise {
@@ -266,7 +280,8 @@ header #navBlock .navbar-toggle:hover {
   body{font-size: 1.6em;}
   header #mask > div > h1, header #mask > div > p { font-weight: normal; font-size: 4rem; }
   #about h2, #skills h2, #expertise > div:first-child h2, #contact h2 { font-size: 4rem; }
-  /*.pictos > img { height: 3em;}*/
+  #about #opquast .thumb img { max-height: 10em;}
+  #about #scholarship .pictos {height: auto;}
   #contact p { font-size: 2rem; }
 }
 
@@ -274,24 +289,29 @@ header #navBlock .navbar-toggle:hover {
   body{font-size: 1.4em;}
   header #mask > div > h1, header #mask > div > p { font-weight: normal; font-size: 2rem;  }
   #about h2, #skills h2, #expertise > div:first-child h2, #contact h2  { font-size: 3rem; }
+    #about #opquast .thumb img { max-height: 10em;}
+    #about #scholarship .pictos {height: auto;}
   #contact p { font-size: 2rem; }
   #skills p, #about > div p { padding: 0 1rem;}
 }
 
 @media all and (max-height: 480px) {
-  header #logo, header #logo a {  height: 15vh; position: absolute; top: 0; left: 0;margin: .5em;}
-  header #hello {  max-height: 100vh; }
-  header #navBlock {  display: block; height: auto; position: absolute; top: 0; right: 0;margin:0; padding: 0;}
+  header #logo, header #logo a { height: 15vh; margin: 4vh; }
+  /*header #logo, header #logo a {  height: 15vh; position: absolute; top: 0; left: 0;margin: .5em;}*/
+  header #hello { max-height: 100vh; margin: 2vh; }
+  /*header #navBlock {  display: block; height: auto; position: absolute; top: 0; right: 0;margin:0; padding: 0;}*/
   header img { max-height:100%;}
   header #navBlock .navbar-toggle {
     height: auto; width: auto;
     font-size: 1em;
     margin: .5em .5em 0 0;
-    float: right;
+    /*float: right;*/
   }
-  header #navBlock .navbar-collapse {text-align: right; margin: 0 1em 0 0;}
+  header #navBlock .navbar-collapse { margin: 0 1em 0 0;}
   .navbar-nav > li > a { margin:0 0 .5em 0; padding:0;}
   header #mask > div > h1 {font-weight: normal; font-size: 1.3em; margin-top: .5em;}
   header #mask > div > p {font-weight: normal; font-size: 1.3em; margin-bottom: 1em;}
-  header #mask {justify-content: flex-end;}
+  header #mask {justify-content: flex-start;}
+    #about #opquast .thumb img { max-height: 8em;}
+    #about #scholarship .pictos {height: auto;}
 }
