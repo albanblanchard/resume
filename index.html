@@ -7,16 +7,15 @@
   <title>Alban Blanchard - Développeur web junior</title>
   <!-- FONTS -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet" />
   <link rel="stylesheet" href="css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?rd5re8" />
   <!-- STYLESHEETS -->
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/master.css" />
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
 </head>
-<body data-spy="scroll" data-target=".navbar">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<body data-spy="scroll" data-target=".navbar" id="top">
   <div class="container-fluid">
     <header>
       <div id="mask">
@@ -26,7 +25,7 @@
           <p>Je conçois et développe des sites web.</p>
           <p><a id="btn-header" href="#footer" type="button" class="btn btn-warning btn-lg">Et je suis disponible !</a></p>
         </div>
-        <div id="navBlock">
+        <!-- <div id="navBlock">
           <nav class="navbar navbar-inverse" role="navigation">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
@@ -39,249 +38,259 @@
               </ul>
             </div>
           </nav>
-        </div><!-- /#navblock -->
+        </div> -->
+        <a href="#about" class="go"><div class="row"><!-- row section footer next section-->
+          <p class="col-lg-12">&Agrave; propos<br/><i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></p>
+        </div></a>
       </div><!-- / #mask -->
     </header>
+
     <section class="row">
       <div id="about" class="col-md-offset-2 col-md-8"><!-- section about me -->
         <div><h2>&Agrave; propos</h2></div>
-        <div class="blockShadow" id="career"><!-- block section w/ boxshadow -->
-          <div class="row">
+        <div class="blockShadow"><!-- block section w/ boxshadow -->
+          <div class="row"  id="career">
             <div class="col-sm-6">
               <h3><i class="fa fa-code fa-lg" aria-hidden="true"></i><br/><span>Développeur web</span></h3>
-              <p>Aujourd'hui en pleine évolution professsionelle je développe en frontend comme en backend.</p>
-              <p>Avec un projet en cours de développement, un site communautaire pour développeurs <a href="https://simplon.co/alumnis/" title="les alumnis de simplon.co">Simploniens</a> <i class="fa fa-external-link" aria-hidden="true"></i>.</p>
-              <p>Du développement jQuery et AngularJS pour des projets e-commerce (systèmes de panier de commande).</p>
-              <p>Un <a href="#scholarship" title="Voir plus de détails dans l'encart formation">diplôme "développeur de sites et d'applications web"</a> en préparation pour avril 2018.</p>
+              <p>Aujourd'hui en pleine évolution professsionelle je code à la fois pour le frontend et le backend.</p>
+              <p>Avec un projet en cours, un site communautaire pour développeurs <a href="https://simplon.co/alumnis/" title="les alumnis de simplon.co">Simploniens <i class="fa fa-external-link" aria-hidden="true"></i></a>.</p>
+              <p>J'ai développé avec jQuery et AngularJS pour des projets e-commerce (systèmes de panier de commande).</p>
+              <p>Je prépare un diplôme "développeur de sites et d'applications web" pour avril 2018. <a href="#scholarship" title="plus de détails ci-dessous dans l'encart formation"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+              <p>Expert en qualité web, j'ai obtenu la certification <a href="https://www.opquast.com/" title="opquast, la certification des professionnels du web">Opquast <i class="fa fa-external-link" aria-hidden="true"></i></a> avec 945 points. <a href="#scholarship" title="plus de détails ci-dessous dans l'encart formation"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
             </div>
             <div class="col-sm-6">
               <h3><i class="fa fa-eye fa-lg" aria-hidden="true"></i><br/><span>Designer</span></h3>
               <p>Plus de 10 années d'expérience en tant que designer web dans les domaines de la communication institutionnelle (<abbr title="Centre National de la Recherche Scientifique">CNRS</abbr>), et de la communication politique (Europe Ecologie - Les Verts).</p>
-              <p>Directeur artistique web sur des campagnes éléctorales, ou sur des projets de rsecherches internationaux.</p>
+              <p>Directeur artistique web sur des campagnes éléctorales, ou sur des projets de recherches internationaux.</p>
+            </div>
+          </div> <!-- /end career -->
+          <a href="#skills"><div class="row next-section"><!-- row section footer next section-->
+            <p class="col-lg-12">mes compétences <br/><i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></p>
+          </div></a>
+          <div class="row section-footer"><!-- row section footer-->
+            <div class="col-sm-12" >
+              <span>&nbsp;</span>
+              <div class="row">
+                <div class="col-sm-12">
+                  <a href="#contact"><p class="anchor-down"><i class="fa fa-info-circle" aria-hidden="true"></i> C'est avec plaisir que je répondrais à vos questions.<br/><i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></p></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- / row  section footer-->
+        </div><!-- /block section w/ boxshadow -->
+      </div><!-- /section about me -->
+    </section>
+
+    <section class="row bg-grey">
+      <div id="skills" class="col-md-offset-2 col-md-8">
+        <div><h2>Mes compétences</h2></div>
+        <div><!-- box-shadow -->
+          <div class="row expertise">
+            <!-- integration -->
+            <div class="col-sm-6">
+              <div class="row thumbs">
+                <div class="col-lg-offset-2 col-lg-2 col-xs-3 pictos"><img src="img/html5.svg" alt="HTML5" class="img-responsive"/></div>
+                <div class="col-lg-2 col-xs-3 pictos"><img src="img/css3.svg" alt="CSS3" class="img-responsive"/></div>
+                <div class="col-lg-2 col-xs-3 pictos"><img src="img/boostrap.svg" alt="Bootstrap" class="img-responsive"/></div>
+                <div class="col-lg-2 col-xs-3 pictos"><img src="img/wordpress.svg" alt="Wordpress" class="img-responsive"/></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <p>Intégration HTML 5 / CSS 3.</p>
+                  <p>Design responsive. </p>
+                  <p>Utilisation du framework CSS Bootstrap. </p>
+                  <p>Design de templates Wordpress.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- programmation -->
+            <div class="col-sm-6">
+              <div class="row  thumbs">
+                <div class="col-lg-offset-4 col-lg-2  col-xs-offset-3 col-xs-3 pictos"><img src="img/javascript.svg" alt="Javascript" class="img-responsive" /></div>
+                <div class="col-lg-2 col-xs-3 pictos"><img src="img/php.svg" alt="CSS3" class="img-responsive" /></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <p>JavaScript, le framework AngularJS, et la librairie jQuery.</p>
+                  <p>En cours d'apprentissage sur PHP et le framework Symfony.</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div><!-- /block section w/ boxshadow -->
 
-        <div class="blockShadow" id="opquast"><!-- block section w/ boxshadow -->
-          <div class="row">
-            <div class="center-block col-sm-3 thumb">
-              <img src="https://data.oqs-cdn.com/openbadges/issuer_EVM1J7.svg" alt="Badge Opquast niveau expert" class="img-responsive center-block" />
-            </div>
-            <div class="col-sm-8">
-              <h3>Certification Opquast</h3>
-              <p>« Maîtrise de la qualité en projet Web », niveau expert (945&nbsp;points&nbsp;/1000).</p>
-              <p><a href="https://certificates.opquast.com/certificate/EVM1J7/">Visualiser le certificat sur le site d'Opquast</a>&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></p>
-            </div>
-          </div>
-        </div><!-- /block section w/ boxshadow -->
-
-        <div class="blockShadow" id="scholarship"><!-- block section w/ boxshadow -->
-          <div class="row">
-            <div class="col-sm-3"><h3>Formation</h3>
-            </div></div>
-            <div class="row">
-              <div class="col-sm-3 pictos">
-                <h3 alt="icone développeur web"><i class="fa fa-code fa-lg" aria-hidden="true"></i></h3>
+          <div class="row expertise">
+            <!-- environnement de travail -->
+            <div class="col-sm-6">
+              <div class="row thumbs">
+                <div class="col-lg-offset-3 col-lg-2  col-xs-offset-1 col-xs-3 pictos"><img src="img/octocat.svg" alt="GitHub" class="img-responsive" /></div>
+                <div class="col-lg-2 col-xs-3 pictos"><img src="img/linux.svg" alt="Debian" class="img-responsive" /></div>
+                <div class="col-lg-2 col-xs-3 pictos"><img src="img/rpi.svg" alt="Raspberry Pi" class="img-responsive" /></div>
               </div>
-              <div class="col-sm-8">
-                <h3> Développeur de sites et d’applications Web</h3>
-                <p>Titre certifié au RNCP Niveau III (passage en avril 2018).</p>
-                <p><a href="#">E2N</a> <i class="fa fa-external-link" aria-hidden="true"></i> - Formation labellisée Grande Ecole du Numérique par l’État / Partenaire de <a href="#">Simplon.co</a> <i class="fa fa-external-link" aria-hidden="true"></i>.</p>
+              <div class="row">
+                <div class="col-sm-12">
+                  <p>Gestion du versionning avec Git et Github.</p>
+                  <p>Je travaille sous les environnements Linux et Windows.</p>
+                  <p>Administration linux, ligne de commande, Bash scripts (expérience de gestion d'un serveur sur Raspberry).</p>
+                </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-3 pictos">
-                <h3 alt="icone designer web"><i class="fa fa-eye fa-lg" aria-hidden="true"></i></h3>
+            <!-- design UI -->
+            <div class="col-sm-6">
+              <div class="row thumbs">
+                <div class="col-lg-offset-4 col-lg-2 col-xs-offset-3 col-xs-3 pictos"><i class="fa fa-eye fa-lg" aria-hidden="true"></i></div>
+                <div class="col-lg-2  col-xs-3 pictos"><img src="img/adobe.svg" alt="Adobe CS" class="img-responsive" /></div>
               </div>
-              <div class="col-sm-8">
-                <h3>Designer multimedia</h3>
-                <p><a href="#">EMC</a>  <i class="fa fa-external-link" aria-hidden="true"></i> - 2001-2003 - Formation en alternance.</p>
-                <p>Conception / réalisation multimedia, spécialité infographie.</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-3 pictos">
-                <h3 alt="icone concepteur web"><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i></h3>
-              </div>
-              <div class="col-sm-8">
-                <h3>Maîtrise de Philosophie</h3>
-                <p><a href="http://www.paris-sorbonne.fr/rubrique3127">Université Paris IV Sorbonne</a>  <i class="fa fa-external-link" aria-hidden="true"></i> - 1999.</p>
-                <p>Philosophie des sciences sociales.</p>
+              <div class="row">
+                <div class="col-sm-12">
+                  <h3>User Interface</h3>
+                  <p>J'ai beaucoup travaillé avec le trio Adobe Illustrator / Photoshop / Dreamweaver.</p>
+                  <p>En plus de l'élaboration de chartes graphiques et de la réalisation de maquettes, j'ai souvent
+                    été impliqué dès les premières étapes de conception de projets.</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div><!-- /block section w/ boxshadow -->
 
-          <div class="blockShadow" id="cv"><!-- block section w/ boxshadow -->
-            <div class="row" style="background-color:#FFB751;">
-              <div class="col-sm-12" >
-                <h3>Besoin d'informations complémentaires :</h3>
-                <p><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <a href="#">Voir mon CV au format PDF.</a></p>
-                <p><i class="fa fa-linkedin-square" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/albanblanchard/">Retrouvez moi sur linkedin.</a> <i class="fa fa-external-link" aria-hidden="true"></i></p>
-                <p><i class="fa fa-envelope" aria-hidden="true"></i> <a href="contact/">C'est avec plaisir que je répondrais à vos questions.</a></p>
-              </div>
-            </div>
-          </div><!-- /block section w/ boxshadow -->
-
-        </div><!-- /section about me -->
-      </section>
-
-      <section id="expertise" class="row">
-        <div class="col-md-offset-2 col-md-8">
-          <h2 style="">Ce que je fais</h2>
-        </div>
-        <div id="skills" class="col-md-offset-2 col-md-8">
-          <div><h2>Mes compétences</h2></div>
-          <div>
-
-            <div class="row">
-              <!-- integration -->
-              <div class="col-sm-6">
-                <div class="row">
-                  <div class="col-lg-offset-2 col-lg-2 col-xs-3 pictos"><img src="img/html5.svg" alt="HTML5" class="img-responsive"/></div>
-                  <div class="col-lg-2 col-xs-3 pictos"><img src="img/css3.svg" alt="CSS3" class="img-responsive"/></div>
-                  <div class="col-lg-2 col-xs-3 pictos"><img src="img/boostrap.svg" alt="Bootstrap" class="img-responsive"/></div>
-                  <div class="col-lg-2 col-xs-3 pictos"><img src="img/wordpress.svg" alt="Wordpress" class="img-responsive"/></div>
+            <div class="row expertise">
+              <div class="col-sm-6"><!-- design UX -->
+                <div class="row thumbs">
+                  <div class="col-lg-offset-5 col-lg-2 col-xs-offset-4 col-xs-3 pictos"><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i></div>
                 </div>
                 <div class="row">
                   <div class="col-sm-12">
-                    <p>Intégration HTML 5 / CSS 3.</p>
-                    <p>Design responsive. </p>
-                    <p>Utilisation du framework CSS Bootstrap. </p>
-                    <p>Design de templates Wordpress.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- programmation -->
-              <div class="col-sm-6">
-                <div class="row">
-                  <div class="col-lg-offset-4 col-lg-2  col-xs-offset-3 col-xs-3 pictos"><img src="img/javascript.svg" alt="Javascript" class="img-responsive" /></div>
-                  <div class="col-lg-2 col-xs-3 pictos"><img src="img/php.svg" alt="CSS3" class="img-responsive" /></div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <p>JavaScript, le framework AngularJS, et la librairie jQuery.</p>
-                    <p>En cours d'apprentissage sur PHP et le framework Symfony.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <!-- environnement de travail -->
-              <div class="col-sm-6">
-                <div class="row">
-                  <div class="col-lg-offset-3 col-lg-2  col-xs-offset-1 col-xs-3 pictos"><img src="img/octocat.svg" alt="GitHub" class="img-responsive" /></div>
-                  <div class="col-lg-2 col-xs-3 pictos"><img src="img/linux.svg" alt="Debian" class="img-responsive" /></div>
-                  <div class="col-lg-2 col-xs-3 pictos"><img src="img/rpi.svg" alt="Raspberry Pi" class="img-responsive" /></div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <p>Gestion du versionning avec Git et Github.</p>
-                    <p>Je travaille sous les environnements Linux et Windows.</p>
-                    <p>Administration linux, ligne de commande, Bash scripts (expérience de gestion d'un serveur sur Raspberry).</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- design -->
-              <div class="col-sm-6">
-
-                <div class="row">
-                  <div class="col-lg-offset-5 col-lg-2  col-xs-offset-4 col-xs-3 pictos"><img src="img/adobe.svg" alt="Adobe CS" class="img-responsive" /></div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12">
-                    <h3><p>UI</p></h3>
-                    <p>J'ai beaucoup travaillé avec le trio Adobe Illustrator / Photoshop / Dreamweaver.</p>
-                    <p>En plus de l'élaboration de chartes graphiques et de la réalisation de maquettes, j'ai souvent été impliqué dès les premières étapes de conception.</p>
-
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-6">
-
-                <div class="row">
-                  <div class="col-lg-offset-5 col-lg-2 col-xs-offset-4 col-xs-3 pictos"><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true" style="font-size:4em;"></i></div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12">
-                    <h3><p>UX</p></h3>
+                    <h3>User eXperience</h3>
                     <p>J'aime aider les clients à traduire des idées et des besoins en fonctionnalités web, avec le soucis permanent de l'ergonomie et d'une architecture d'information intuitive.</p>
                     <p>En devant me mettre à la place du client et des utilisateurs j'ai pu renouer avec certains aspects de ma formation initiale en sciences humaines (philosophie/sciences sociales).</p>
                   </div>
                 </div>
               </div>
-
-            </div>
-          </div>
-        </div>
+            </div><!-- fin row -->
+            <a href="#scholarship"><div class="row next-section"><!-- row section footer next section-->
+              <p class="col-lg-12">formation <br/><i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></p>
+            </div></a>
+            <div class="row section-footer"><!-- row section footer-->
+              <div class="col-sm-12" >
+                <span>&nbsp;</span>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <a href="#contact">
+                      <p class="anchor-down"><i class="fa fa-info-circle" aria-hidden="true"></i> Non vraiment n'hésitez pas!<br/><i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div><!-- / row  section footer-->
+          </div> <!-- fin box shadow -->
+        </div>  <!-- fin skills -->
       </section>
 
+
+      <section class="row bg-grey">
+        <div id="scholarship" class="col-md-offset-2 col-md-8">
+          <div><h2>Formation</h2></div>
+          <div><!-- block section w/ boxshadow -->
+            <div class="row" id="opquast">
+              <div class="col-sm-3 pictos">
+                <h3><a href="https://certificates.opquast.com/certificate/EVM1J7/" title="Badge Opquast niveau expert"><img src="https://data.oqs-cdn.com/openbadges/issuer_EVM1J7.svg" alt="Badge Opquast niveau expert" class="img-responsive" /></a></h3>
+              </div>
+              <div class="col-sm-8">
+                <h3>Certification Opquast</h3>
+                <p>« Maîtrise de la qualité en projet Web », niveau expert (945&nbsp;points&nbsp;/1000).</p>
+                <p><a href="https://certificates.opquast.com/certificate/EVM1J7/">Visualiser le certificat sur le site d'Opquast&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>.</p>
+              </div>
+            </div>
+
+            <div class="row" id="degrees">
+              <div class="col-md-3 col-sm-12 pictos">
+                <h3 alt="picto développeur web"><i class="fa fa-code fa-lg" aria-hidden="true"></i></h3>
+              </div>
+              <div class="col-md-8 col-sm-12">
+                <h3> Développeur de sites et d’applications Web</h3>
+                <p>Titre certifié au RNCP Niveau III (passage en avril 2018).</p>
+                <p><a href="#">E2N <i class="fa fa-external-link" aria-hidden="true"></i></a> - Formation labellisée Grande Ecole du Numérique par l’État / Partenaire de <a href="#">Simplon.co <i class="fa fa-external-link" aria-hidden="true"></i></a>.</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3 pictos">
+                <h3 alt="picto designer web"><i class="fa fa-eye fa-lg" aria-hidden="true"></i></h3>
+              </div>
+              <div class="col-md-8">
+                <h3>Designer multimedia</h3>
+                <p><a href="#">EMC  <i class="fa fa-external-link" aria-hidden="true"></i></a> - 2001-2003 - Formation en alternance.</p>
+                <p>Conception / réalisation multimedia, spécialité infographie.</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3 pictos">
+                <h3 alt="picto concepteur web"><i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i></h3>
+              </div>
+              <div class="col-md-8">
+                <h3>Maîtrise de Philosophie</h3>
+                <p><a href="http://www.paris-sorbonne.fr/rubrique3127">Université Paris IV Sorbonne <i class="fa fa-external-link" aria-hidden="true"></i></a> - 1999.</p>
+                <p>Philosophie des sciences sociales.</p>
+              </div>
+            </div>
+
+            <div class="row section-footer"><!-- row cv = section footer-->
+              <div class="col-sm-12" >
+                <h3><i class="fa fa-info-circle" aria-hidden="true"></i> Besoin d'informations complémentaires&nbsp;?</h3>
+
+                <a href="#"><div class="row cv-infos">
+                  <div class="col-md-1 col-xs-3">
+                    <p><i class="fa fa-file-pdf-o fa-lg center-block" aria-hidden="true"></i></p>
+                  </div>
+                  <div class="col-md-11 col-xs-9 ">
+                    <p>Voir mon CV au format PDF. [10Mo]</p>
+                  </div>
+                </div></a>
+
+                <a href="https://www.linkedin.com/in/albanblanchard/">
+                  <div class="row cv-infos">
+                    <div class="col-md-1 col-xs-3">
+                      <p><i class="fa fa-linkedin-square fa-lg center-block" aria-hidden="true"></i></p>
+                    </div>
+                    <div class="col-md-11 col-xs-9">
+                      <p>Retrouvez-moi sur linkedin <i class="fa fa-external-link" aria-hidden="true"></i>.</p>
+                    </div>
+                  </div>
+                </a>
+
+                <div class="row">
+                  <div class="col-sm-12">
+                    <a href="#contact"><p class="anchor-down"><i class="fa fa-coffee" aria-hidden="true"></i> De toutes façons maintenant vous y êtes.<br/><i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></p></a>
+                  </div>
+                </div>
+              </div>
+            </div><!-- / row cv section footer-->
+          </div><!-- / block section w/ boxshadow -->
+        </div>
+      </section>
 
       <section id="contact" class="row text-center">
         <div class="col-lg-offset-2 col-lg-8">
           <h2>Vous recherchez un développeur&nbsp;?</h2>
           <p>Ou pour simplement discuter web devant un café :</p>
-          <button class="btn btn-warning btn-lg" data-toggle="modal" data-target="#modalForm">
+          <a class="btn btn-warning btn-lg" href="#">
             <i class="fa fa-coffee" aria-hidden="true"></i><br/>Envoyez-moi un message!
-          </button>
-          <!-- <p><a href="#modal-contact" type="button" data-toggle="modal" class="btn btn-warning btn-lg"><i class="fa fa-coffee" aria-hidden="true"></i><br/>Envoyez-moi un message!</a></p> -->
-          <!-- modal -->
-          <div class="modal fade" id="modalForm" role="dialog">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <!-- <button type="button" class="close" data-dismiss="modal">x</button> -->
-                  <button type="button" class="close" data-dismiss="modal">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">Close</span>
-                  </button>
-                  <!-- <h4 class="modal-title">contact</h4> -->
-                </div>
-                <div class="modal-body">
-                  <!-- formulaire -->
-                  <p class="statusMsg"></p>
-                  <form role="form">
-                    <div class="form-group">
-                      <label for="inputName">Name</label>
-                      <input type="text" class="form-control" id="inputName" placeholder="Enter your name"/>
-                    </div>
-                    <div class="form-group">
-                      <label for="inputEmail">Email</label>
-                      <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email"/>
-                    </div>
-                    <div class="form-group">
-                      <label for="inputMessage">Message</label>
-                      <textarea class="form-control" id="inputMessage" placeholder="Enter your message"></textarea>
-                    </div>
-                  </form>
-                  <!-- fin formulaire -->
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary submitBtn" onclick="submitContactForm()">SUBMIT</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- fin modal -->
+          </a>
         </div>
-
       </section>
       <footer id="footer" class="row">
+        <section id="socials" class="col-lg-12">
+          <a href="https://github.com/albanblanchard" title="mon compte github"><p><i class="fa fa-lg fa-github-alt" aria-hidden="true"></i></p></a>
+          <a href="https://www.linkedin.com/in/albanblanchard/" title="retrouvez-moi sur linkedin"><p><i class="fa fa-lg fa-linkedin" aria-hidden="true"></i></p></a>
+        </section>
         <section id="copyright" class="col-lg-12">
           <p>Garantie fait main, 100% pixels recyclés.</p>
-          <p><a href="#logo">me</a> © 2017 </p>
-        </section>
-        <section id="socials" class="col-lg-12">
-          <p><a href="https://github.com/albanblanchard" class="socicon-github"></a></p> <p><a href="https://www.linkedin.com/in/albanblanchard/" class="socicon-linkedin"></a></p>
+          <p><a href="#logo" title="alban blanchard développeur web">me</a> © 2017 </p>
+          <p><a href="#top" title="top"><i class="fa fa-angle-up fa-lg" aria-hidden="true"></i></a> </p>
         </section>
       </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script> -->
     <!-- <script src="js/validator.min.js"></script> -->

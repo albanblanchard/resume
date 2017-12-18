@@ -8,17 +8,23 @@ body {
   font-size: 1.8rem;
 }
 /*liens*/
-p a:link, p a:visited { color: #000; text-decoration: underline;}
-p a:hover {background-color: #221e1b; color: #2BC3CE;}
+p a:link, p a:visited { color: #000; text-decoration: underline; transition: all .5s;}
+p a:hover {background-color: #221e1b; color: #2BC3CE; }
 /**************************** TITRAILLE ***************************************/
-header #mask > div > h1, header #mask > div > p, #contact h2, #about h2, #skills h2, #expertise > div:first-child h2 {
+header #mask > div > h1, header #mask > div > p, #contact h2, .bg-grey > div:first-child h2 {
   font-size: 5rem;
   font-weight: 700;
   color: #fff;
   padding: 0 1rem;
 }
-
-/******************************* HEADER / ECRAN 1 *****************************/
+#about h2, #skills h2, #scholarship h2, .next-section, .go {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: #221e1b;
+}
+/********************************************* HEADER / ECRAN 1 ****************************************************************************************/
 header {
   min-height:100vh; width: 100%;
   padding: 0; margin-bottom: 4rem;
@@ -27,8 +33,6 @@ header {
   background-image: url('../img/ab-bg02.jpg');
   background-size: cover;
   background-position: center center;
-  /*background-position-x: center;
-  background-position-y: center;*/
   background-repeat: no-repeat;
   -moz-box-shadow: 0px 5px 10px 0px #9b9b9b;
   -webkit-box-shadow: 0px 5px 10px 0px #9b9b9b;
@@ -80,32 +84,31 @@ header img {
 #btn-header {
   text-decoration: none;
 }
+header .go, header .go i {color: #fff; font-weight: bold; font-size: 1em;}
+header .go i {font-size: 2em;}
 
-/**********************************************************************
+/****************************************************************************************************************************************************
 LAYOUT MODULES de SECTIONS, BANDEAUX TITRES + ENCARTS TEXTE
-**********************************************************************/
-/*section.row {
-  padding-bottom: 4rem;
-  -moz-box-shadow: 0px 10px 10px 0px #9b9b9b;
-  box-shadow: 0px 10px 10px 0px #9b9b9b;
-}*/
-#about, #skills {
+*****************************************************************************************************************************************************/
+
+#about, #skills, #scholarship {
   /*float: none;*/
   padding: 0 0 4rem 0;
 }
 /*bloc qui contient le titre de section h2*/
-#about > div:nth-child(1), #skills > div:nth-child(1) {
-  background: -moz-linear-gradient(45deg,  rgba(252,252,252,0) 0%, rgba(254,191,4,1) 66%);
-  background: -webkit-linear-gradient(45deg,  rgba(252,252,252,0) 0%,rgba(254,191,4,1) 66%);
-  background: linear-gradient(45deg,  rgba(252,252,252,0) 0%,rgba(254,191,4,1) 66%);
+#about > div:nth-child(1), #skills > div:nth-child(1), #scholarship > div:nth-child(1) {
+  background: -moz-linear-gradient(0deg,  rgba(252,252,252,0) 0%, rgba(254,220,4,1) 66%);
+  background: -webkit-linear-gradient(0deg,  rgba(252,252,252,0) 0%,rgba(254,220,4,1) 66%);
+  background: linear-gradient(0deg,  rgba(252,252,252,0) 0%,rgba(254,220,4,1) 66%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fcfcfc', endColorstr='#febf04',GradientType=1 );
   padding: .1em 2em .5em 0;
   text-align: right;
   font-style: italic;
-  border-radius: 0 .5rem .5rem 0;
+  height:15em;
+  /*border-radius: .5rem;*/
  }
  /*bloc de contenu de section avec box shadow*/
-#about > div.blockShadow, #skills > div:nth-child(2) {
+#about > div.blockShadow, #skills > div:nth-child(2), #scholarship > div:nth-child(2) {
   background-color: #fff;
   /*margin: -1.5em 1.5em 0;*/
   margin: 1.5em;
@@ -115,68 +118,76 @@ LAYOUT MODULES de SECTIONS, BANDEAUX TITRES + ENCARTS TEXTE
   -o-box-shadow: 0px 5px 10px 0px #9b9b9b;
   box-shadow: 0px 5px 10px 0px #9b9b9b;
   filter:progid:DXImageTransform.Microsoft.Shadow(color=#9b9b9b, Direction=180, Strength=10);
-  -moz-border-radius: 0 0 1rem 1rem;
-  -webkit-border-radius: 0 0 1rem 1rem;
-  border-radius: 0 .5rem .5rem 0;
+  -moz-border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
 }
 /*marge négative pour superposition blocs titres de sections et blocs contenus sections*/
-#about > div:nth-child(2), #skills > div:nth-child(2) {  margin: -1.5em 1.5em 0; }
+#about > div:nth-child(2), #skills > div:nth-child(2), #scholarship > div:nth-child(2) {  margin: -10em 1.5em 0; }
 
-/******************************* ABOUT ME************************************/
-#about h3 { text-align: center; margin-bottom: 1em; }
-#about .fa-lg { color:#000; font-size: 2em; }
-#about h3 span { display: block; margin-top: 1em; }
-#about > div p { padding:0 3rem; }
-#about > div p:first-child { padding: 3rem; }
-#about > div p:last-child { padding-bottom: 3rem; }
-/*#about #opquast .thumb {text-align: center;}*/
-#about #opquast h3, #about #scholarship h3 { text-align: left; }
-#about #opquast .row, #about #scholarship .row { padding:1em; }
-#about #opquast div p, #about #scholarship div p { padding:0 ; }
-#about #scholarship .pictos {display: flex; align-items: center; justify-content: center; height: 10em;}
-/*#about #scholarship .pictos h3 {text-align: center;}*/
+section .next-section{ font-size: 1em; text-align: center; padding:.5rem; border-top: .2rem dotted #FEDC04;}
+section a .next-section {transition: all .5s; text-decoration: none;}
+section a:hover .next-section{background-color: #FEDC04;border-top: .2rem solid #FFF;text-decoration: none;}
+/*background-color: #FEDC04;*/
+/*footer de sections / infos complémentaires*/
+.fa-lg { color:#000; font-size: 2em; }
+ .section-footer {background-color:#221E1B; border-radius: 0 0 1rem 1rem;margin-top: 1rem;}
+ .section-footer .cv-infos { padding: 1rem; background-color: #fff; border-radius: 1rem;margin-bottom: .5rem;}
+ .section-footer .cv-infos i {color: #221E1B; text-align: center;  margin: 0;}
+ .section-footer h3 { color: #fff; text-transform: uppercase; margin: 1em;}
+ .section-footer a:link, .section-footer a:visited, .section-footer a:link .cv-infos { color: #221E1B; text-decoration: none; transition: all .5s; }
+ .section-footer a:hover .cv-infos {color: #2BC3CE; background-color: #000;}
+ .section-footer a:hover i {color: #2BC3CE; }
+/*navigation ancre pied de section*/
+ .section-footer .anchor-down {text-align: center;}
+ .section-footer a .anchor-down {color: #FFF; text-decoration: none; text-transform: uppercase;transition: all .5s;}
+ .section-footer a .anchor-down i.fa-lg {color: #FFF; background-color: none;}
+ .section-footer a:hover .anchor-down, .section-footer a:hover .anchor-down i.fa-lg  {color: #2BC3CE;}
 
-/*******************************  WHAT I DO ***********************************/
-#expertise {
+/************************************* ABOUT ME ****************************************************************************************************/
+#about #career h3 { text-align: center; margin-bottom: 1em;}
+/*#about .fa-lg { color:#000; font-size: 2em; }*/
+#about #career h3 span { display: block; margin-top: 1em; }
+#about #career > div p { padding:0 3rem; }
+#about #career > div p:first-child { padding: 3rem; }
+#about #career > div p:last-child { padding-bottom: 3rem; }
+
+/*******************************  entetes SECTIONS dégradé gris background **********************************************************************************************************/
+section.bg-grey {
   background: #fcfcfc;
   background: -moz-linear-gradient(45deg,  #fcfcfc 0%, #fcfcfc 51%, #eaeaea 100%);
   background: -webkit-linear-gradient(45deg,  #fcfcfc 0%,#fcfcfc 51%,#eaeaea 100%);
   background: linear-gradient(45deg,  #fcfcfc 0%,#fcfcfc 51%,#eaeaea 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#eaeaea',GradientType=1 );
+  padding-top: 1em;
 }
-#expertise > div:first-child {
-  background: -moz-linear-gradient(left,  rgba(252,252,252,0) 0%, rgba(234,234,234,1) 80%, rgba(234,234,234,0) 100%);
-  background: -webkit-linear-gradient(left,  rgba(252,252,252,0) 0%,rgba(234,234,234,1) 80%,rgba(234,234,234,0) 100%);
-  background: linear-gradient(to right,  rgba(252,252,252,0) 0%,rgba(234,234,234,1) 80%,rgba(234,234,234,0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fcfcfc', endColorstr='#00eaeaea',GradientType=1 );
-  margin-bottom: 1em;
-}
-#expertise > div:first-child h2 {
-  margin:0; padding: 0;
-  color:white;
-  text-align:right;
-  /*font-weight: 700;*/
-  font-style: italic;
-  font-size: 4rem;
-}
-/*mes compétences*/
-#skills > div > div.row > div {padding: 0;}
-#skills > div > div.row > div > div.row:first-child {padding: 10% 10% 0 10%;}
-#skills > div > div.row > div > div.row > .pictos { text-align: center; padding: 0; }
-#skills > div > div.row > div > div.row > .pictos.pictos > img {
-  /*border: 1px dashed black;*/
-  padding: 0; margin: 0 .2em;
-}
-#skills p {margin: 1em 0; padding: 0 3rem;}
-#skills > div > div.row > div > div.row { }
-/*réalisations*/
-/*#portfolio{}*/
+/********************************** SECTION mes compétences ***************************************************************************************/
 
-/*****************************  CONTACT / HIRE ME ******************************/
+#skills > div > div.row > div {padding: 0;} /*col sm 6*/
+#skills .expertise .thumbs {padding: 10% 10% 0 10%;}
+#skills .expertise .pictos { text-align: center; padding: 0; }
+#skills .expertise .pictos > img {  padding: 0; margin: 0 .2em;}
+#skills .expertise .fa-lg {font-size:3em; color: #000;}
+#skills .expertise h3 {padding:1rem 3rem; margin-top: 0; text-align: center;}
+#skills .expertise p {margin: 1em 0; padding: 0 3rem;}
 
-#contact { background-color: #ffb751; min-height: 50vh;}
+/******************************* SECTION formation *****************************************************************************************************/
+
+#scholarship h3 { text-align: left; }
+#scholarship .row {  padding:1em;}
+#scholarship div p { padding:0 ; }
+#scholarship .pictos {
+  display: flex; justify-content: center;
+  height: 100%;
+}
+#opquast .pictos img { max-height: 5em;}
+
+
+/*****************************  CONTACT / HIRE ME **************************************************************************************************/
+
+#contact { background-color: #ffb751; min-height: 50vh;padding: 2em 0;}
 #contact div { box-shadow: none; }
-#contact h2 { padding: 0; margin: 0; }
+#contact h2 { padding: 0; margin: 0; text-transform: }
 #contact p { font-size: 3rem; }
 #contact h2 + p { margin-top: 2%; }
 #contact button { margin-top: 3%; }
@@ -192,43 +203,41 @@ LAYOUT MODULES de SECTIONS, BANDEAUX TITRES + ENCARTS TEXTE
 }
 
 
-footer {
-  min-height: 25vh;
+#footer {
+  height: 50vh;
   background-color: #221e1b;
 }
-footer #socials {
+#footer #socials {
   background-color: #221e1b;
-  width: 100%; margin: 0; padding: 2em 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%; height: 50%; margin: 0; padding: 2em 0;
+  display: flex; justify-content: center;  align-items: center;
+  box-sizing: border-box;
 }
-footer #copyright {color: #595959;
+#footer #copyright {
+    display: flex; justify-content: center;  align-items: center; flex-direction: column;
+  color: #595959;
   background-color: #221e1b;
-  width: 100%; margin: 0; padding: 2em 0 0 0;
+  width: 100%; height: 50%; margin: 0; padding: 2em 0 0 0;
   text-align: center; font-size: .8em;
+    box-sizing: border-box;
 }
-footer #socials p {
-  margin: 0 1em; padding: .2em;
+#footer #copyright i {color: #fff; font-size: 2em;}
+#footer #socials p {
+  margin: 0 ; padding: .6em;
   background-color: #333;
   display: flex; justify-content: center; align-items: center;
-  height: 3em; width: 3em;
-  /*border: .3em solid #595959; */
   border-radius: 50%;
   transition: background-color .5s;
+  box-sizing: border-box;
 }
-footer #socials p:hover{
+#footer #socials p:hover{
   background-color: #08FDD8;
 }
-footer a:link, footer a:visited { color: #fff; text-decoration: none;}
-footer a:hover {
-  color: #000;
-  border: 0;
-}
-/*socicon*/
-.socicon-github, .socicon-linkedin {
-  font-size: 2em;
-}
+#footer #socials p i {display: block; font-size: 2em;}
+#footer a:link, footer a:visited {color: #fff; text-decoration: none;}
+#footer #socials a:hover { color: #000;}
+#footer #socials a:link, footer #socials a:visited {color: #fff; margin:0 1em; padding: 0;}
+#footer #socials a:link i.fa-lg, #footer #socials a:visited i.fa-lg {color: #fff;}
 
 /* ----------------------------------------------------------------
 bootstrap classes overide
@@ -279,28 +288,36 @@ header #navBlock .navbar-toggle:hover {
 @media all and (min-width:500px) and (max-width: 992px) {
   body{font-size: 1.6em;}
   header #mask > div > h1, header #mask > div > p { font-weight: normal; font-size: 4rem; }
-  #about h2, #skills h2, #expertise > div:first-child h2, #contact h2 { font-size: 4rem; }
-  #about #opquast .thumb img { max-height: 10em;}
-  #about #scholarship .pictos {height: auto;}
+  #about h2, #skills h2,#scholarship h2, .bg-grey > div:first-child h2 { font-size: 2.5rem; }
+  #opquast .pictos img { max-height: 4em;}
   #contact p { font-size: 2rem; }
+  #contact h2 { font-size: 2.5rem; }
 }
 
 @media all and (max-width: 499px) {
   body{font-size: 1.4em;}
   header #mask > div > h1, header #mask > div > p { font-weight: normal; font-size: 2rem;  }
-  #about h2, #skills h2, #expertise > div:first-child h2, #contact h2  { font-size: 3rem; }
-    #about #opquast .thumb img { max-height: 10em;}
-    #about #scholarship .pictos {height: auto;}
+  #about h2, #skills h2, #scholarship h2, .bg-grey > div:first-child h2 { font-size: 2rem; }
+  #scholarship .row {  padding:1rem 0; margin-bottom: .1rem;}
+  #scholarship h3 { margin-top: 1rem;}
+  .section-footer h3 { margin: 1rem 0;}
+  /*#scholarship #opquast {padding-top: 1rem;}*/
+  #scholarship #opquast .pictos img { max-height: 4em;}
+  #contact h2 { font-size: 2.5rem; }
   #contact p { font-size: 2rem; }
-  #skills p, #about > div p { padding: 0 1rem;}
+  #skills .expertise h3 {padding:1rem 1rem 0; }
+  #skills .expertise p {padding:0; }
+  #about #career > div p { padding: 0;}
 }
 
-@media all and (max-height: 480px) {
+@media all and (max-width: 350px) {
+  h3 {font-size: 1.5em;}
   header #logo, header #logo a { height: 15vh; margin: 4vh; }
   /*header #logo, header #logo a {  height: 15vh; position: absolute; top: 0; left: 0;margin: .5em;}*/
   header #hello { max-height: 100vh; margin: 2vh; }
   /*header #navBlock {  display: block; height: auto; position: absolute; top: 0; right: 0;margin:0; padding: 0;}*/
   header img { max-height:100%;}
+  header #btn-header {font-size: .9em;}
   header #navBlock .navbar-toggle {
     height: auto; width: auto;
     font-size: 1em;
@@ -312,6 +329,6 @@ header #navBlock .navbar-toggle:hover {
   header #mask > div > h1 {font-weight: normal; font-size: 1.3em; margin-top: .5em;}
   header #mask > div > p {font-weight: normal; font-size: 1.3em; margin-bottom: 1em;}
   header #mask {justify-content: flex-start;}
-    #about #opquast .thumb img { max-height: 8em;}
-    #about #scholarship .pictos {height: auto;}
+  #opquast .pictos img { max-height: 4em;}
+  #contact .btn {font-size: 1.1em;}
 }
