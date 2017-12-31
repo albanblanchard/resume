@@ -187,7 +187,7 @@ section.bg-grey {
 
 #contact { background-color: #ffb751; min-height: 50vh;padding: 2em 0;}
 #contact div { box-shadow: none; }
-#contact h2 { padding: 0; margin: 0; text-transform: }
+#contact h2 { padding: 0; margin: 0;  }
 #contact p { font-size: 3rem; }
 #contact h2 + p { margin-top: 2%; }
 #contact button { margin-top: 3%; }
