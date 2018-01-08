@@ -8,11 +8,12 @@ body {
   font-size: 1.8rem;
 }
 /*liens*/
-p a:link, p a:visited { color: #000; text-decoration: underline; transition: all .5s;}
-p a:hover {background-color: #221e1b; color: #2BC3CE; }
+a:link, a:visited { color: #000; text-decoration: underline; transition: all .5s;}
+a:hover {background-color: #221e1b; color: #2BC3CE; }
+a:link.no-decoration, a:visited.no-decoration, a:hover.no-decoration{text-decoration:none; background-color: transparent;}
 /**************************** TITRAILLE ***************************************/
-header #mask > div > h1, header #mask > div > p, #contact h2, .bg-grey > div:first-child h2 {
-  font-size: 5rem;
+header h1, header p, #contact h2 {
+  font-size: 4rem;
   font-weight: 700;
   color: #fff;
   padding: 0 1rem;
@@ -24,6 +25,27 @@ header #mask > div > h1, header #mask > div > p, #contact h2, .bg-grey > div:fir
   font-size: 3rem;
   color: #221e1b;
 }
+/*PICTOS*/
+.fa-lg { font-size: 2em; }
+/**************************************************************** ANIMATIONS **************************************************************************/
+/*anim pour les ancres/liens de navigation = chevrons down*/
+@keyframes bounce {
+  from {transform: translateY(0rem);}
+  to {transform: translateY(1rem);}
+}
+@-moz-keyframes bounce {
+  from {transform: translateY(0rem);}
+  to {transform: translateY(1rem);}
+}
+@-webkit-keyframes{
+  from {transform: translateY(0rem);}
+  to {transform: translateY(1rem);}
+}
+@-o-keyframes {
+  from {transform: translateY(0rem);}
+  to {transform: translateY(1rem);}
+}
+
 /********************************************* HEADER / ECRAN 1 ****************************************************************************************/
 header {
   min-height:100vh; width: 100%;
@@ -48,51 +70,47 @@ header #mask {
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-  /*position: absolute;*/
   background-color: rgba(34, 30, 27, 0.4);
   min-height: 100vh;
   height:100%; width: 100%; margin: 0; padding: 0;
-  /*opacity: .4;
-  z-index: 0;*/
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
   border-radius: 0 0 1rem 1rem;
 }
 header #logo { height: 25vh;}
 header #hello {  max-height: 45vh;}
-header #navBlock {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  min-height: 30vh;
-}
 header img {
   max-height:50%;
   margin: 2%;
 }
-/*#btn-header.btn {color: #221e1b;}*/
-#btn-header.btn:hover {
-  color: #221e1b; background-color: #ec971f; border-color: #ec971f;
+
+#btn-header {
+  text-decoration: none;
+  font-size: 2.5rem;
 }
 #btn-header.btn {
   text-transform: uppercase;
-  /*font-variant: small-caps;*/
   background-color: transparent;
   border-width: 3px;
   color: #eea236;
 }
-#btn-header {
-  text-decoration: none;
+#btn-header.btn:hover {
+  color: #221e1b; background-color: #ec971f; border-color: #ec971f;
 }
-header .go, header .go i {color: #fff; font-weight: bold; font-size: 1em;}
-header .go i {font-size: 2em;}
+header .go {border-radius: 0 0 1rem 1rem;}
+header .go p {color: #fff; font-weight: bold; font-size: 2rem; }
+header .go:link, header .go:link .fa{text-decoration: none; transition: all .3s}
+header .go:hover{background-color: rgba(254, 220, 4, 0.2);}
+header .go:hover .fa {
+  -webkit-animation: bounce .5s infinite alternate; /* Safari 4+ */
+  -moz-animation: bounce .5s infinite alternate; /* Fx 5+ */
+  -o-animation: bounce .5s infinite alternate; /* Opera 12+ */
+  animation: bounce .5s infinite alternate; /* IE 10+, Fx 29+ */
+}
 
 /****************************************************************************************************************************************************
 LAYOUT MODULES de SECTIONS, BANDEAUX TITRES + ENCARTS TEXTE
 *****************************************************************************************************************************************************/
 
 #about, #skills, #scholarship {
-  /*float: none;*/
   padding: 0 0 4rem 0;
 }
 /*bloc qui contient le titre de section h2*/
@@ -104,10 +122,10 @@ LAYOUT MODULES de SECTIONS, BANDEAUX TITRES + ENCARTS TEXTE
   padding: .1em 2em .5em 0;
   text-align: right;
   font-style: italic;
-  height:15em;
+  height:15em ;
   /*border-radius: .5rem;*/
- }
- /*bloc de contenu de section avec box shadow*/
+}
+/*bloc de contenu de section avec box shadow*/
 #about > div.blockShadow, #skills > div:nth-child(2), #scholarship > div:nth-child(2) {
   background-color: #fff;
   /*margin: -1.5em 1.5em 0;*/
@@ -123,28 +141,45 @@ LAYOUT MODULES de SECTIONS, BANDEAUX TITRES + ENCARTS TEXTE
   border-radius: 1rem;
 }
 /*marge négative pour superposition blocs titres de sections et blocs contenus sections*/
-#about > div:nth-child(2), #skills > div:nth-child(2), #scholarship > div:nth-child(2) {  margin: -10em 1.5em 0; }
+#about > div:nth-child(2), #skills > div:nth-child(2), #scholarship > div:nth-child(2) {margin: -10em 1.5em 0; }
 
-section .next-section{ font-size: 1em; text-align: center; padding:.5rem; border-top: .2rem dotted #FEDC04;}
-section a .next-section {transition: all .5s; text-decoration: none;}
-section a:hover .next-section{background-color: #FEDC04;border-top: .2rem solid #FFF;text-decoration: none;}
-/*background-color: #FEDC04;*/
-/*footer de sections / infos complémentaires*/
-.fa-lg { color:#000; font-size: 2em; }
- .section-footer {background-color:#221E1B; border-radius: 0 0 1rem 1rem;margin-top: 1rem;}
- .section-footer .cv-infos { padding: 1rem; background-color: #fff; border-radius: 1rem;margin-bottom: .5rem;}
- .section-footer .cv-infos i {color: #221E1B; text-align: center;  margin: 0;}
- .section-footer h3 { color: #fff; text-transform: uppercase; margin: 1em;}
- .section-footer a:link, .section-footer a:visited, .section-footer a:link .cv-infos { color: #221E1B; text-decoration: none; transition: all .5s; }
- .section-footer a:hover .cv-infos {color: #2BC3CE; background-color: #000;}
- .section-footer a:hover i {color: #2BC3CE; }
-/*navigation ancre pied de section*/
- .section-footer .anchor-down {text-align: center;}
- .section-footer a .anchor-down {color: #FFF; text-decoration: none; text-transform: uppercase;transition: all .5s;}
- .section-footer a .anchor-down i.fa-lg {color: #FFF; background-color: none;}
- .section-footer a:hover .anchor-down, .section-footer a:hover .anchor-down i.fa-lg  {color: #2BC3CE;}
+/*nav section suivante*/
+section .next-section{font-size: 1em; text-align: center; padding:.5rem; border-top: .2rem dotted #FEDC04; transition: all .5s; }
+section a:link, section a:link .fa-lg  {transition: all .5s;}
+section a:hover .next-section{background-color: #FEDC04;}
+section .next-section .fa-lg {color:#000;}
+section a:hover .next-section .fa-lg {
+  transform: translateY(1rem);
+}
 
-/************************************* ABOUT ME ****************************************************************************************************/
+/*  FOOTER de sections
+
+infos complémentaires*/
+.row.section-footer {background-color: #221E1B; border-radius: 0 0 1rem 1rem; padding-top: 1rem; transition: all .5s;}
+#about .row.section-footer:hover, #skills .row.section-footer:hover, #scholarship nav.row:hover {background-color: #000;}
+#scholarship nav.row {border-radius: 1rem; padding: 1rem 0 0 0;transition: all .5s;}
+
+.section-footer .cv-infos {padding: 1rem; background-color: #fff; border-radius: 1rem; margin-bottom: .5rem;}
+.section-footer .cv-infos p {margin: 0;}
+.section-footer .cv-infos i {color: #221E1B; text-align: center;  margin: 0;}
+.section-footer h3 {color: #fff; text-transform: uppercase; margin: 1em;}
+.section-footer a:link, .section-footer a:visited, .section-footer a:link .cv-infos { color: #221E1B; transition: all .5s; }
+.section-footer a:hover .cv-infos {color: #2BC3CE; background-color: #000;}
+.section-footer a:hover i {color: #2BC3CE;}
+
+/*navigation ancre vers ecran contact-footer */
+.section-footer .anchor-down {text-align: center; }
+.section-footer a .anchor-down {color: #FFF; text-decoration: none; text-transform: uppercase; transition: all .5s;}
+.section-footer a .anchor-down i.fa-lg {color: #FFF; background-color: none;}
+.section-footer a:hover .anchor-down, .section-footer a:hover .anchor-down i.fa  {color: #ffb751; }
+.section-footer a:hover .anchor-down i.fa-lg  {
+  -webkit-animation: bounce .5s infinite alternate; /* Safari 4+ */
+  -moz-animation: bounce .5s infinite alternate; /* Fx 5+ */
+  -o-animation: bounce .5s infinite alternate; /* Opera 12+ */
+  animation: bounce .5s infinite alternate; /* IE 10+, Fx 29+ */
+}
+
+/************************************* section intro ABOUT ME ****************************************************************************************************/
 #about #career h3 { text-align: center; margin-bottom: 1em;}
 /*#about .fa-lg { color:#000; font-size: 2em; }*/
 #about #career h3 span { display: block; margin-top: 1em; }
@@ -152,7 +187,8 @@ section a:hover .next-section{background-color: #FEDC04;border-top: .2rem solid 
 #about #career > div p:first-child { padding: 3rem; }
 #about #career > div p:last-child { padding-bottom: 3rem; }
 
-/*******************************  entetes SECTIONS dégradé gris background **********************************************************************************************************/
+
+/*******************************  entetes SECTIONS suivantes. dégradé gris en background ***************************************************************************/
 section.bg-grey {
   background: #fcfcfc;
   background: -moz-linear-gradient(45deg,  #fcfcfc 0%, #fcfcfc 51%, #eaeaea 100%);
@@ -185,8 +221,9 @@ section.bg-grey {
 
 /*****************************  CONTACT / HIRE ME **************************************************************************************************/
 
-#contact { background-color: #ffb751; min-height: 50vh;padding: 2em 0;}
-#contact div { box-shadow: none; }
+#contact { background-color: #ffb751; height: auto; padding: 0; }
+#contact .flexbox {padding-top: 1em;}
+/*#contact div { box-shadow: none; }*/
 #contact h2 { padding: 0; margin: 0;  }
 #contact p { font-size: 3rem; }
 #contact h2 + p { margin-top: 2%; }
@@ -200,9 +237,20 @@ section.bg-grey {
   border-width: 3px;
   color: #fff;
   border-color: #fff;
+  font-size: 2.5rem;
+}
+#contact .flexbox {height: 50vh; display: flex; flex-direction:column;  justify-content: space-between;}
+/*#contact .go, #contact .go nav {display: inline-block; width: auto;}*/
+#contact .go p {font-size: 2rem; margin: 0;}
+#contact a.go:link {color: #221e1b; }
+#contact a.go:hover i.fa-lg {
+  -webkit-animation: bounce .5s infinite alternate; /* Safari 4+ */
+  -moz-animation: bounce .5s infinite alternate; /* Fx 5+ */
+  -o-animation: bounce .5s infinite alternate; /* Opera 12+ */
+  animation: bounce .5s infinite alternate; /* IE 10+, Fx 29+ */
 }
 
-
+/************************************FOOTER ********************************************************************************************************/
 #footer {
   height: 50vh;
   background-color: #221e1b;
@@ -214,12 +262,12 @@ section.bg-grey {
   box-sizing: border-box;
 }
 #footer #copyright {
-    display: flex; justify-content: center;  align-items: center; flex-direction: column;
+  display: flex; justify-content: center;  align-items: center; flex-direction: column;
   color: #595959;
   background-color: #221e1b;
-  width: 100%; height: 50%; margin: 0; padding: 2em 0 0 0;
+  width: 100%; height: 50%; margin: 0; padding: 2em 0;
   text-align: center; font-size: .8em;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 #footer #copyright i {color: #fff; font-size: 2em;}
 #footer #socials p {
@@ -248,87 +296,51 @@ bootstrap classes overide
 .col-md-12{
   margin: 0; padding: 2rem;
 }
-.btn {font-weight: 700; border-radius: 2em; padding: .5em 1.5em; transition: all .2s ease-in; }
+.btn {font-weight: 700; border-radius: 2em; padding: .5em 1.5em; transition: all .2s ease-in;}
 /*.btn a:link, .btn a:visited {color: #fff;}*/
 .btn:hover{padding: .5em 2em;}
-
-.navbar-inverse {
-  background-color: inherit;
-  border: 0;
-  font-size: 2rem; font-weight: 700;
-  color: #fff;
-}
-header #navBlock .navbar-collapse {
-  border: none;
-  box-shadow: none;
-  -webkit-box-shadow: none;
-}
-header #navBlock .navbar-nav > li > a {color: #fff;}
-header #navBlock .navbar-nav > li > a:hover { color: #2BC3CE;}
-header #navBlock .navbar-toggle {
-  float: none;
-  height: auto; width: auto;
-  font-size: 1em;
-  margin: 0;
-  line-height: 1em;
-  /*margin: 8px;*/
-  border-color: #fff;
-  color: #fff;
-}
-header #navBlock .navbar-toggle:focus { background-color: transparent; }
-header #navBlock .navbar-toggle:hover {
-  background-color: #fff;
-  color: #2BC3CE;
-  opacity: .7;
-}
 
 /*
 ************************** media queries **************************
 */
 @media all and (min-width:500px) and (max-width: 992px) {
   body{font-size: 1.6em;}
-  header #mask > div > h1, header #mask > div > p { font-weight: normal; font-size: 4rem; }
-  #about h2, #skills h2,#scholarship h2, .bg-grey > div:first-child h2 { font-size: 2.5rem; }
+  header h1, header p {font-size: 4rem; }
+  #about h2, #skills h2,#scholarship h2{ font-size: 2.5rem; }
   #opquast .pictos img { max-height: 4em;}
+  #contact h2 { font-size: 2.7rem; }
   #contact p { font-size: 2rem; }
-  #contact h2 { font-size: 2.5rem; }
+  #contact .btn { font-size: 1.7rem; }
 }
 
 @media all and (max-width: 499px) {
   body{font-size: 1.4em;}
-  header #mask > div > h1, header #mask > div > p { font-weight: normal; font-size: 2rem;  }
-  #about h2, #skills h2, #scholarship h2, .bg-grey > div:first-child h2 { font-size: 2rem; }
+  header h1, header p {font-size: 2rem;}
+  #btn-header {font-size: 1.7rem;}
+  header .go nav p {font-size: 1.5rem;  }
+  #about h2, #skills h2, #scholarship h2{ font-size: 2rem; }
   #scholarship .row {  padding:1rem 0; margin-bottom: .1rem;}
   #scholarship h3 { margin-top: 1rem;}
-  .section-footer h3 { margin: 1rem 0;}
-  /*#scholarship #opquast {padding-top: 1rem;}*/
   #scholarship #opquast .pictos img { max-height: 4em;}
-  #contact h2 { font-size: 2.5rem; }
+  #contact .flexbox {padding: .5rem 0;}
+  #contact h2 { font-size: 2.7rem; }
   #contact p { font-size: 2rem; }
+  #contact .btn { font-size: 1.7rem; }
+  #contact .go nav p {font-size: 1.5rem;  }
   #skills .expertise h3 {padding:1rem 1rem 0; }
   #skills .expertise p {padding:0; }
   #about #career > div p { padding: 0;}
+  .section-footer h3 { margin: 1rem 0;}
 }
 
 @media all and (max-width: 350px) {
   h3 {font-size: 1.5em;}
-  header #logo, header #logo a { height: 15vh; margin: 4vh; }
-  /*header #logo, header #logo a {  height: 15vh; position: absolute; top: 0; left: 0;margin: .5em;}*/
-  header #hello { max-height: 100vh; margin: 2vh; }
-  /*header #navBlock {  display: block; height: auto; position: absolute; top: 0; right: 0;margin:0; padding: 0;}*/
-  header img { max-height:100%;}
-  header #btn-header {font-size: .9em;}
-  header #navBlock .navbar-toggle {
-    height: auto; width: auto;
-    font-size: 1em;
-    margin: .5em .5em 0 0;
-    /*float: right;*/
-  }
-  header #navBlock .navbar-collapse { margin: 0 1em 0 0;}
-  .navbar-nav > li > a { margin:0 0 .5em 0; padding:0;}
-  header #mask > div > h1 {font-weight: normal; font-size: 1.3em; margin-top: .5em;}
-  header #mask > div > p {font-weight: normal; font-size: 1.3em; margin-bottom: 1em;}
-  header #mask {justify-content: flex-start;}
+  header #btn-header {font-size: 1.5rem;}
+  header h1 {font-size: 1.3em; margin-top: .5em;}
+  header p {font-size: 1.3em; }
   #opquast .pictos img { max-height: 4em;}
-  #contact .btn {font-size: 1.1em;}
+  #contact h2 { font-size: 2.5rem; }
+  #contact p { font-size: 1.8rem; }
+  #contact .btn {font-size: 1.5rem;}
+  #contact .go nav p {font-size: 1.3rem;  }
 }

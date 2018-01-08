@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="description" content="Alban Blanchard - Designer et développeur web.">
+  <meta name="description" content="Alban Blanchard - Designer et développeur web." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Alban Blanchard - Développeur web</title>
+  <link rel="stylesheet" href="css/reset.css" />
   <!-- FONTS -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet" />
   <link rel="stylesheet" href="css/font-awesome.min.css" />
   <!-- STYLESHEETS -->
   <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- <link rel="stylesheet" href="css/bootswatch.slate.min.css" /> -->
   <link rel="stylesheet" href="css/master.css" />
+  <!-- FAVICON -->
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
 </head>
@@ -19,29 +22,15 @@
   <div class="container-fluid">
     <header>
       <div id="mask">
-        <div id="logo"><a href="#"><img src="img/logo.svg" alt="alban" title="Alban Blanchard - développeur web"/></a></div>
+        <div id="logo"><a href="#" class="no-decoration"><img src="img/logo.svg" alt="alban" title="Alban Blanchard - développeur web"/></a></div>
         <div id="hello">
           <h1>Hello, je m'appelle Alban.</h1>
           <p>Je conçois et développe des sites web.</p>
-          <p><a id="btn-header" href="#footer" type="button" class="btn btn-warning btn-lg">Oui je suis disponible !</a></p>
+          <p><a id="btn-header" href="#contact" type="button" class="btn btn-warning btn-lg">Et je suis disponible !</a></p>
         </div>
-        <!-- <div id="navBlock">
-          <nav class="navbar navbar-inverse" role="navigation">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
-                <li><a href="#about">&Agrave; propos</a></li>
-                <li><a href="#expertise">Ce que je fais</a></li>
-                <li><a href="#contact">Travaillons ensemble !</a></li>
-              </ul>
-            </div>
-          </nav>
-        </div> -->
-        <a href="#about" class="go"><div class="row"><!-- row section footer next section-->
+        <a href="#about" class="go"><nav class="row"><!-- row / section footer / nav to next section-->
           <p class="col-lg-12">&Agrave; propos<br/><i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></p>
-        </div></a>
+        </nav></a>
       </div><!-- / #mask -->
     </header>
 
@@ -55,8 +44,8 @@
               <p>Aujourd'hui en pleine évolution professsionelle je code à la fois pour le frontend et le backend.</p>
               <p>Avec un projet en cours, un site communautaire pour les développeurs <a href="https://simplon.co/alumnis/" title="les alumnis de simplon.co">Simploniens <i class="fa fa-external-link" aria-hidden="true"></i></a>.</p>
               <p>J'ai développé avec jQuery et AngularJS pour des projets e-commerce (systèmes de panier de commande).</p>
-              <p>Je prépare un diplôme "développeur de sites et d'applications web" pour avril 2018. <a href="#scholarship" title="plus de détails ci-dessous dans l'encart formation"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
-              <p>Expert en qualité web, j'ai obtenu la certification <a href="https://www.opquast.com/" title="opquast, la certification des professionnels du web">Opquast <i class="fa fa-external-link" aria-hidden="true"></i></a> avec 945 points. <a href="#scholarship" title="plus de détails ci-dessous dans l'encart formation"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+              <p>Je prépare un diplôme "développeur de sites et d'applications web" pour avril 2018. <!--<a href="#scholarship" title="plus de détails ci-dessous dans l'encart formation"><i class="fa fa-info-circle" aria-hidden="true"></i></a>--></p>
+              <p>Expert en qualité web, j'ai obtenu la certification <a href="https://www.opquast.com/" title="opquast, la certification des professionnels du web">Opquast <i class="fa fa-external-link" aria-hidden="true"></i></a> avec 945 points. <!--<a href="#scholarship" title="plus de détails ci-dessous dans l'encart formation"><i class="fa fa-info-circle" aria-hidden="true"></i></a>--></p>
             </div>
             <div class="col-sm-6">
               <h3><i class="fa fa-eye fa-lg" aria-hidden="true"></i><br/><span>Designer</span></h3>
@@ -64,21 +53,18 @@
               <p>Directeur artistique web sur des campagnes éléctorales, ou sur des projets de recherches internationaux.</p>
             </div>
           </div> <!-- /end career -->
-          <a href="#skills"><div class="row next-section"><!-- row section footer next section-->
+          <a href="#skills" class="no-decoration"><nav class="row next-section"><!-- row section footer nav to next section-->
             <p class="col-lg-12">mes compétences <br/><i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></p>
-          </div></a>
-          <div class="row section-footer"><!-- row section footer-->
-            <div class="col-sm-12" >
-              <span>&nbsp;</span>
-              <div class="row">
-                <div class="col-sm-12">
-                  <a href="#contact"><p class="anchor-down"><i class="fa fa-info-circle" aria-hidden="true"></i> C'est avec plaisir que je répondrais à vos questions.<br/><i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></p></a>
-                </div>
-              </div>
+          </nav></a>
+          <nav class="row section-footer"><!-- row section footer / go to contact section -->
+            <div class="col-sm-12">
+              <a href="#contact" class="no-decoration">
+                <p class="anchor-down"><i class="fa fa-coffee" aria-hidden="true"></i><br />C'est avec plaisir que je répondrais à vos questions.<br/><i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></p>
+              </a>
             </div>
-          </div><!-- / row  section footer-->
-        </div><!-- /block section w/ boxshadow -->
-      </div><!-- /section about me -->
+          </nav><!-- end row section footer / go to contact section -->
+        </div><!-- end block section w/ boxshadow -->
+      </div><!-- end section about me -->
     </section>
 
     <section class="row bg-grey">
@@ -166,21 +152,16 @@
                 </div>
               </div>
             </div><!-- fin row -->
-            <a href="#scholarship"><div class="row next-section"><!-- row section footer next section-->
-              <p class="col-lg-12">formation <br/><i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></p>
+            <a href="#scholarship" class="no-decoration"><div class="row next-section"><!-- row section footer next section-->
+              <p class="col-lg-12">formation<br/><i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></p>
             </div></a>
-            <div class="row section-footer"><!-- row section footer-->
-              <div class="col-sm-12" >
-                <span>&nbsp;</span>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <a href="#contact">
-                      <p class="anchor-down"><i class="fa fa-info-circle" aria-hidden="true"></i> Non vraiment n'hésitez pas!<br/><i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></p>
-                    </a>
-                  </div>
-                </div>
+            <nav class="row section-footer"><!-- row section footer-->
+              <div class="col-sm-12">
+                <a href="#contact" class="no-decoration">
+                  <p class="anchor-down"><i class="fa fa-coffee" aria-hidden="true"></i><br />Non vraiment n'hésitez pas!<br/><i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></p>
+                </a>
               </div>
-            </div><!-- / row  section footer-->
+            </nav><!-- / row  section footer-->
           </div> <!-- fin box shadow -->
         </div>  <!-- fin skills -->
       </section>
@@ -258,11 +239,13 @@
                   </div>
                 </a>
 
-                <div class="row">
+                <nav class="row">
                   <div class="col-sm-12">
-                    <a href="#contact"><p class="anchor-down"><i class="fa fa-coffee" aria-hidden="true"></i> De toute façon maintenant vous y êtes.<br/><i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></p></a>
+                    <a href="#contact" class="no-decoration">
+                      <p class="anchor-down"><i class="fa fa-coffee" aria-hidden="true"></i><br />De toute façon maintenant vous y êtes :<br/><i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></p>
+                    </a>
                   </div>
-                </div>
+                </nav>
               </div>
             </div><!-- / row cv section footer-->
           </div><!-- / block section w/ boxshadow -->
@@ -271,30 +254,69 @@
 
       <section id="contact" class="row text-center">
         <div class="col-lg-offset-2 col-lg-8">
+<div class="flexbox">
+          <div>
           <h2>Vous recherchez un développeur&nbsp;?</h2>
-          <p>Ou pour simplement discuter web devant un café :</p>
-          <a class="btn btn-warning btn-lg" href="#">
-            <i class="fa fa-coffee" aria-hidden="true"></i><br/>Envoyez-moi un message!
-          </a>
+          <p>Ou même pour simplement discuter web devant un café :</p>
+          <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target=".contact-modal-lg"><i class="fa fa-coffee" aria-hidden="true"></i><br/>Envoyez-moi un message!</button>
+
         </div>
-      </section>
-      <footer id="footer" class="row">
-        <section id="socials" class="col-lg-12">
-          <a href="https://github.com/albanblanchard" title="mon compte github"><p><i class="fa fa-lg fa-github-alt" aria-hidden="true"></i></p></a>
-          <a href="https://www.linkedin.com/in/albanblanchard/" title="retrouvez-moi sur linkedin"><p><i class="fa fa-lg fa-linkedin" aria-hidden="true"></i></p></a>
-        </section>
-        <section id="copyright" class="col-lg-12">
-          <p>Garantie fait main, 100% pixels recyclés.</p>
-          <p><a href="#logo" title="alban blanchard développeur web">me</a> © 2017 </p>
-          <p><a href="#top" title="top"><i class="fa fa-angle-up fa-lg" aria-hidden="true"></i></a> </p>
-        </section>
-      </footer>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script> -->
-    <!-- <script src="js/validator.min.js"></script> -->
-    <script src="js/scripts.js"></script>
-    <script src="js/velocity.min.js"></script>
-  </body>
-  </html>
+
+          <a href="#about" class="go no-decoration"><nav>
+            <p><i class="fa fa-angle-up fa-lg" aria-hidden="true"></i><br />rembobiner</p>
+          </nav></a>
+
+      </div>
+      </div>
+
+
+      <!-- Large modal -->
+      <div class="modal fade contact-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- fin Large modal -->
+  </section>
+
+  <footer id="footer" class="row">
+    <section id="socials" class="col-lg-12">
+      <a href="https://github.com/albanblanchard" title="mon compte github"><p><i class="fa fa-lg fa-github-alt" aria-hidden="true"></i></p></a>
+      <a href="https://www.linkedin.com/in/albanblanchard/" title="retrouvez-moi sur linkedin"><p><i class="fa fa-lg fa-linkedin" aria-hidden="true"></i></p></a>
+    </section>
+    <section id="copyright" class="col-lg-12">
+      <p>Garantie fait main, 100% pixels recyclés.</p>
+      <p><a href="#logo" data-toggle="tooltip" data-placement="bottom" title="alban blanchard développeur web">me</a> © 2017 </p>
+      <p><a href="#top" data-toggle="tooltip" data-placement="bottom" title="remonter en haut de la page"><i class="fa fa-angle-up fa-lg" aria-hidden="true"></i></a></p>
+    </section>
+  </footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/velocity.min.js"></script>
+</body>
+</html>
