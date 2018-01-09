@@ -2,20 +2,49 @@ $(function () {
   //active les tooltips BS
   $('[data-toggle="tooltip"]').tooltip();
 
-    // bind click event to all internal page anchors
-    $('a[href*="#"]').on('click', function (e) {
-        // prevent default action and bubbling
-        e.preventDefault();
-        e.stopPropagation();
-        // set target to anchor's "href" attribute
-        var target = $(this).attr('href');
-        // scroll to each target
-        $(target).velocity('scroll', {
-            duration: 1000,
-            // offset: 0,
-            easing: 'easeOutExpo'
-        });
+  // hack pour problème de height:100vh sur les navigateurs mobiles qui ne prennent pas en compte la présence de leur barre de menu ds le calcul
+  function calcVH() {
+    $('header').innerHeight( $(this).innerHeight() );
+    $('#mask').innerHeight( $(this).innerHeight() );
+  }
+  calcVH();
+  $(window).on('resize orientationchange', function() {
+    calcVH();
+  });
+
+// destination par défaut du bouton "rewind"
+backToTarget = $('#top');
+// enregistrement de la provenance du click sur un lien vers #contact, pour utilisation avec le bouton "rewind"
+  $('a[href*="#contact"]').click(function(){
+    backToTarget = this;
+    console.log(backToTarget);
+  });
+  // fonction scroll du bouton rewind avec destination enregistrée ci-dessus
+  $('#rewind').on('click', function (e) {
+    // prevent default action and bubbling
+    e.preventDefault();
+    e.stopPropagation();
+    $(backToTarget).velocity('scroll', {
+      duration: 1000,
+      easing: 'easeOutExpo'
     });
+  });
+
+  // bind click event to all internal page anchors
+  $('a[href*="#"]').on('click', function (e) {
+    // prevent default action and bubbling
+    e.preventDefault();
+    e.stopPropagation();
+    // set target to anchor's "href" attribute
+    var target = $(this).attr('href');
+    // scroll to each target
+    $(target).velocity('scroll', {
+      duration: 1000,
+      // offset: 0,
+      easing: 'easeOutExpo'
+    });
+  });
+
 });
 
 
