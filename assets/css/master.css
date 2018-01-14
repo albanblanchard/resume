@@ -9,8 +9,17 @@ body {
 }
 /*liens*/
 a:link, a:visited { color: #000; text-decoration: underline; transition: all .5s;}
-a:hover, a:active, a:focus {background-color: #221e1b; color: #2BC3CE; }
+a:hover {background-color: #221e1b; color: #2BC3CE; }
 a:link.no-decoration, a:visited.no-decoration, a:hover.no-decoration{text-decoration:none; background-color: transparent;}
+/*ajout icone lien externes*/
+p > a:not( [href^='#'] ):not( [href^='/'] ):after {
+  font-family: 'FontAwesome';
+    content: " \f08e";
+}
+/*hover couleur pour liens internes*/
+p > a[href^='#']:hover, p > a[href^='/']:hover {
+  color: #FFB751;
+}
 /**************************** TITRAILLE ***************************************/
 header h1, header p, #contact h2 {
   font-size: 4rem;
@@ -143,7 +152,7 @@ LAYOUT MODULES de SECTIONS, BANDEAUX TITRES + ENCARTS TEXTE
 /*marge négative pour superposition blocs titres de sections et blocs contenus sections*/
 #about > div:nth-child(2), #skills > div:nth-child(2), #scholarship > div:nth-child(2) {margin: -10em 1.5em 0; }
 
-/*nav section suivante*/
+/*NAVIGATION vers section suivante*/
 section .next-section{font-size: 1em; text-align: center; padding:.5rem; border-top: .2rem dotted #FEDC04; transition: all .5s; }
 section a:link, section a:link .fa-lg  {transition: all .5s;}
 section a:hover .next-section {background-color: #FEDC04;}
@@ -159,13 +168,17 @@ infos complémentaires*/
 #about .row.section-footer:hover, #skills .row.section-footer:hover, #scholarship nav.row:hover {background-color: #000;}
 #scholarship nav.row {border-radius: 1rem; padding: 1rem 0 0 0;transition: all .5s;}
 
+.section-footer h3 {color: #fff; text-transform: uppercase; margin: 1em;}
+.section-footer a:link, .section-footer a:visited, .section-footer a:link .cv-infos { color: #221E1B; transition: all .5s; }
+.section-footer a:hover i {color: #2BC3CE;}
+/* boutons du footer de section formation*/
 .section-footer .cv-infos {padding: 1rem; background-color: #fff; border-radius: 1rem; margin-bottom: .5rem;}
 .section-footer .cv-infos p {margin: 0;}
 .section-footer .cv-infos i {color: #221E1B; text-align: center;  margin: 0;}
-.section-footer h3 {color: #fff; text-transform: uppercase; margin: 1em;}
-.section-footer a:link, .section-footer a:visited, .section-footer a:link .cv-infos { color: #221E1B; transition: all .5s; }
 .section-footer a:hover .cv-infos {color: #2BC3CE; background-color: #000;}
-.section-footer a:hover i {color: #2BC3CE;}
+.section-footer a[href^='#']:hover .cv-infos, .section-footer a[href^='/']:hover .cv-infos, .section-footer a[href^='#']:hover .cv-infos i, .section-footer a[href^='/']:hover .cv-infos i{
+    color: #FFB751;
+}
 
 /*navigation ancre vers ecran contact-footer */
 .section-footer .anchor-down {text-align: center; }
