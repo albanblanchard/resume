@@ -12,38 +12,40 @@ $(function () {
     calcVH();
   });
 
-  // destination par défaut du bouton "rewind"
-  backToTarget = $('#top');
-  // enregistrement de la provenance du click sur un lien vers #contact, pour utilisation avec le bouton "rewind"
-  $('a[href*="#contact"]').click(function(){
-    backToTarget = this;
-    console.log(backToTarget);
-  });
-  // fonction scroll du bouton rewind avec destination enregistrée ci-dessus
-  $('#rewind').on('click', function (e) {
-    // prevent default action and bubbling
-    e.preventDefault();
-    e.stopPropagation();
-    $(backToTarget).velocity('scroll', {
-      duration: 1000,
-      easing: 'easeOutExpo'
+    // bind click event to all internal page anchors
+    $('a[href*="#"]').on('click', function(e) {
+      // prevent default action and bubbling
+      e.preventDefault();
+     e.stopPropagation();
+      // set target to anchor's "href" attribute
+      var target = $(this).attr('href');
+      // scroll to each target
+      $(target).velocity('scroll', {
+        duration: 1000,
+        // offset: 0,
+        easing: 'easeOutExpo'
+      });
     });
-  });
 
-  // bind click event to all internal page anchors
-  $('a[href*="#"]').on('click', function (e) {
-    // prevent default action and bubbling
-    e.preventDefault();
-    e.stopPropagation();
-    // set target to anchor's "href" attribute
-    var target = $(this).attr('href');
-    // scroll to each target
-    $(target).velocity('scroll', {
-      duration: 1000,
-      // offset: 0,
-      easing: 'easeOutExpo'
-    });
-  });
+    // destination par défaut du bouton "rewind"
+    backToTarget = '#top';
+    // enregistrement de la provenance du clic sur les liens vers #contact, pour ré-utilisation avec le bouton "rewind"
+      $('a[href="#contact"]').on('click', function(){
+        backToTarget = $(this).hasClass('last') ? '#top' : '#' + $(this).attr('id');
+        console.log(backToTarget);
+      });
+      // fonction scroll du bouton rewind avec destination enregistrée ci-dessus
+      $('#rewind').on('click', function(event) {
+        // prevent default action and bubbling
+    event.preventDefault();
+     event.stopPropagation();
+        $(backToTarget).velocity('scroll', {
+          duration: 1000,
+          easing: 'easeOutExpo'
+        });
+        backToTarget = '#top';
+        console.log(backToTarget);
+      });
 
   //===================================================================================================================================
   //=========================================================   FORMULAIRE   ==========================================================
