@@ -1,8 +1,10 @@
 $("#contactForm").validator().on("submit", function (event) {
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
+        console.log('invalid:(');
     } else {
         // everything looks good!
+        console.log('valid!');
         event.preventDefault();
         submitForm();
     }
@@ -15,16 +17,17 @@ function submitForm(){
     var message = $("#message").val();
 
     $.ajax({
-        type: "POST",
-        url: "php/process.php",
+        type: "GET",
+        url: "assets/php/contact.php",
         data: "name=" + name + "&email=" + email + "&message=" + message,
         success : function(text){
-            if (text == "success"){
+            if (text == "ok"){
                 formSuccess();
             }
         }
     });
 }
+
 function formSuccess(){
     $( "#msgSubmit" ).removeClass( "hidden" );
 }

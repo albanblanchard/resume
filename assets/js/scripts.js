@@ -12,9 +12,9 @@ $(function () {
     calcVH();
   });
 
-// destination par défaut du bouton "rewind"
-backToTarget = $('#top');
-// enregistrement de la provenance du click sur un lien vers #contact, pour utilisation avec le bouton "rewind"
+  // destination par défaut du bouton "rewind"
+  backToTarget = $('#top');
+  // enregistrement de la provenance du click sur un lien vers #contact, pour utilisation avec le bouton "rewind"
   $('a[href*="#contact"]').click(function(){
     backToTarget = this;
     console.log(backToTarget);
@@ -45,6 +45,53 @@ backToTarget = $('#top');
     });
   });
 
+  //===================================================================================================================================
+  //=========================================================   FORMULAIRE   ==========================================================
+  //===================================================================================================================================
+  $('#modal-content-submit').hide();
+
+  $("#contactForm").validator().on("submit", function (event) {
+    if (event.isDefaultPrevented()) {
+      // handle the invalid form...
+      console.log('invalid:(');
+    } else {
+      // everything looks good!
+      console.log('valid!');
+      event.preventDefault();
+      submitForm();
+    }
+  });
+
+  function submitForm(){
+    // Initiate Variables With Form Content
+    console.log('submitting');
+    name = encodeURIComponent($("#name").val());
+    var email = encodeURIComponent($("#email").val());
+    var message = encodeURIComponent($("#message").val());
+
+    $.ajax({
+      type: "POST",
+      url: "assets/php/contact.php",
+      data: "name=" + name + "&email=" + email + "&message=" + message,
+      success : function(text){
+        if (text == "ok"){
+          formSuccess();
+        } else{
+          console.log('php issue');
+          console.log(text);
+        }
+      }
+    });
+  }
+
+  function formSuccess(){
+    // $( "#msgSubmit" ).removeClass( "hidden" );
+      $('#modal-content-form').hide();
+      $('#modal-content-submit').show();
+    console.log('ajax ok');
+  }
+
+  //end global fn
 });
 
 

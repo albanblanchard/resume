@@ -1,10 +1,10 @@
 <?php
-if(isset($_POST['contactFrmSubmit']) && !empty($_POST['name']) && !empty($_POST['email']) && (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false) && !empty($_POST['message'])){
+if(isset($_GET['submit']) && !empty($_GET['name']) && !empty($_GET['email']) && (!filter_var($_GET['email'], FILTER_VALIDATE_EMAIL) === false) && !empty($_GET['message'])){
 
     // Submitted form data
-    $name   = $_POST['name'];
-    $email  = $_POST['email'];
-    $message= $_POST['message'];
+    $name   = $_GET['name'];
+    $email  = $_GET['email'];
+    $message= $_GET['message'];
 
     /*
      * Send email to admin
@@ -35,9 +35,9 @@ if(isset($_POST['contactFrmSubmit']) && !empty($_POST['name']) && !empty($_POST[
 
     // Send email
     if(mail($to,$subject,$htmlContent,$headers)){
-        $status = 'ok';
+      $status = 'ok';
     }else{
-        $status = 'err';
+      $status = 'error';
     }
 
     // Output status
