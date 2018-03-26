@@ -46,11 +46,11 @@ header h1, header p, #contact h2 {
   from {transform: translateY(0rem);}
   to {transform: translateY(1rem);}
 }
-@-webkit-keyframes{
+@-webkit-keyframes bounce {
   from {transform: translateY(0rem);}
   to {transform: translateY(1rem);}
 }
-@-o-keyframes {
+@-o-keyframes bounce {
   from {transform: translateY(0rem);}
   to {transform: translateY(1rem);}
 }
