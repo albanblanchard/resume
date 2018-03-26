@@ -265,6 +265,7 @@ section.bg-grey {
   -o-animation: bounce .5s infinite alternate; /* Opera 12+ */
   animation: bounce .5s infinite alternate; /* IE 10+, Fx 29+ */
 }
+.modal .bg-dark{background-color: #221e1b; color: #FFF;}
 
 /************************************FOOTER ********************************************************************************************************/
 #footer {
